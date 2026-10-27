@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AfriWell Bridge | Healing & Education for Rural Africa</title>
+  <meta name="description" content="Living out Christ's healing and teaching ministry through free rural medical outreach and education scholarships in Africa.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.ico">
+
+  <!-- Google Fonts: Archivo & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#13284F',
+              'navy-dark': '#0A1730',
+              gold: '#B8902F',
+              'gold-light': '#D9B25A',
+              cream: '#F8F6F2',
+              'cream-light': '#FAF9F6',
+              slate: '#475569',
+            }
+          },
+          fontFamily: {
+            heading: ['Archivo', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #1E293B;
+      background-color: #FFFFFF;
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Archivo', sans-serif;
+      letter-spacing: -0.02em;
+    }
+    .btn-gold {
+      background-color: #B8902F;
+      color: #FFFFFF;
+      transition: all 0.2s ease;
+    }
+    .btn-gold:hover {
+      background-color: #9C7722;
+      transform: translateY(-1px);
+    }
+    .btn-navy {
+      background-color: #13284F;
+      color: #FFFFFF;
+      transition: all 0.2s ease;
+    }
+    .btn-navy:hover {
+      background-color: #0A1730;
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body class="selection:bg-brand-gold selection:text-white antialiased">
+
+  <!-- SMART MINIMAL NAVBAR -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 transition-all">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center">
+          <img src="assets/img/logo-light.svg" alt="AfriWell Bridge" class="h-11 sm:h-12 w-auto">
+        </a>
+
+        <!-- Clean Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+          <a href="#about" class="hover:text-brand-navy transition">Mission</a>
+          <a href="#programs" class="hover:text-brand-navy transition">Programs</a>
+          <a href="#impact" class="hover:text-brand-navy transition">Impact</a>
+          <a href="#stories" class="hover:text-brand-navy transition">Stories</a>
+          <a href="#contact" class="hover:text-brand-navy transition">Contact</a>
+        </nav>
+
+        <!-- Primary Action -->
+        <div class="flex items-center gap-3">
+          <a href="#give" class="btn-navy px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider">
+            Support Us
+          </a>
+          <!-- Mobile Menu Button -->
+          <button id="menuBtn" class="md:hidden p-2 text-slate-700 hover:text-brand-navy" aria-label="Toggle menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-100 px-6 py-4 space-y-3 text-sm font-semibold text-slate-700">
+      <a href="#about" class="block py-1 hover:text-brand-navy">Mission</a>
+      <a href="#programs" class="block py-1 hover:text-brand-navy">Programs</a>
+      <a href="#impact" class="block py-1 hover:text-brand-navy">Impact</a>
+      <a href="#stories" class="block py-1 hover:text-brand-navy">Stories</a>
+      <a href="#contact" class="block py-1 hover:text-brand-navy">Contact</a>
+      <div class="pt-2">
+        <a href="#give" class="block w-full text-center btn-gold py-2.5 rounded-full text-xs font-bold uppercase tracking-wider">Support Us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION: SMART, CLEAN & AIRY -->
+  <section class="pt-12 pb-16 sm:pt-20 sm:pb-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-3xl mx-auto text-center space-y-6">
+        
+        <!-- Subtle Pill -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-cream border border-slate-200 text-brand-navy text-xs font-bold tracking-wide">
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
+          Christian Humanitarian Service • West Africa
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-navy leading-[1.15] tracking-tight">
+          Healing, Hope & Education for Rural Africa.
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-2xl mx-auto">
+          Living out the Gospel by furthering Christ’s healing and teaching ministry. We provide free rural medical care and education scholarships where access is needed most.
+        </p>
+
+        <!-- Actions -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+          <a href="#give" class="w-full sm:w-auto btn-gold px-8 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider text-white shadow-sm">
+            Support Our Mission
+          </a>
+          <a href="#programs" class="w-full sm:w-auto px-6 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider text-brand-navy hover:bg-slate-50 transition border border-slate-200">
+            Explore Programs
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Hero Visual: One Clean Authentic Frame -->
+      <div class="mt-12 sm:mt-16 max-w-4xl mx-auto">
+        <div class="relative rounded-3xl overflow-hidden shadow-lg border border-slate-100">
+          <img src="assets/img/community-family.jpg" alt="African community members and children" class="w-full h-[320px] sm:h-[460px] object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-navy-dark/70 via-transparent to-transparent flex items-end p-6 sm:p-10">
+            <div class="text-white">
+              <span class="text-xs uppercase font-bold tracking-wider text-brand-gold-light">Our Vision</span>
+              <p class="text-lg sm:text-2xl font-bold font-heading mt-0.5">
+                “Healthy Communities, Educated Children, Hopeful Futures.”
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SCRIPTURE ANCHOR: MINIMAL & POIGNANT -->
+  <section class="py-12 bg-brand-cream border-y border-slate-200/60">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-3">
+      <blockquote class="text-lg sm:text-xl font-medium text-slate-800 italic leading-relaxed">
+        “As we have therefore opportunities, let us do good unto all men, most especially unto those who are of the household of faith.”
+      </blockquote>
+      <div class="text-brand-gold font-bold text-xs uppercase tracking-widest font-heading">
+        Galatians 6:10
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO WE ARE & THE GAP WE BRIDGE -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-16 items-center">
+        
+        <div class="md:col-span-5 space-y-4">
+          <span class="text-brand-gold font-bold text-xs uppercase tracking-widest">The Reality</span>
+          <h2 class="text-3xl font-extrabold text-brand-navy font-heading leading-tight">
+            Bridging the Distance to Care & Learning
+          </h2>
+          <div class="w-12 h-1 bg-brand-gold"></div>
+        </div>
+
+        <div class="md:col-span-7 space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+          <p>
+            In rural African communities, poverty creates severe barriers to the two essentials every human deserves: health and education.
+          </p>
+          <p>
+            Families endure treatable conditions like hernia or malaria for years simply because transportation and hospital fees are unaffordable. Meanwhile, bright children are forced out of school when their families cannot afford uniforms, books, or bags.
+          </p>
+          <p class="font-medium text-slate-800">
+            AfriWell Bridge (AWB) steps directly into that gap—mobilizing healthcare professionals and providing education supplies with Christian compassion.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TWO FLAGSHIP PROGRAMS: CLEAN 2-COLUMN -->
+  <section id="programs" class="py-20 bg-slate-50 border-t border-slate-200/60">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14 space-y-2">
+        <span class="text-brand-gold font-bold text-xs uppercase tracking-widest">Focused Interventions</span>
+        <h2 class="text-3xl font-extrabold text-brand-navy font-heading">
+          Our Two Flagship Programs
+        </h2>
+        <p class="text-slate-600 text-sm">
+          Practical, high-impact solutions addressing the root barriers in underserved rural communities.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Program 1: Medical Outreach -->
+        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-brand-navy/5 text-brand-navy flex items-center justify-center">
+              <i data-lucide="stethoscope" class="w-6 h-6 text-brand-gold"></i>
+            </div>
+            
+            <div>
+              <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Annual 1-Month Mission</span>
+              <h3 class="text-2xl font-bold text-brand-navy font-heading mt-1">Rural Medical Outreach</h3>
+            </div>
+
+            <p class="text-slate-600 text-sm leading-relaxed">
+              We bring doctors, nurses, and pharmacists directly to isolated villages to provide free medical consultations, screening, and treatment.
+            </p>
+
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 pt-2">
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
+                <span>Free doctor consultations & general medical triage</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
+                <span>Blood pressure, glucose & malaria testing</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
+                <span>Free prescription medication dispensing</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
+                <span>Referral network for hernia & surgical hospital care</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-500">“Healing & Hope”</span>
+            <a href="#give" class="text-xs font-bold text-brand-navy hover:text-brand-gold transition flex items-center gap-1">
+              Support Healthcare &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Program 2: Education Scholarships -->
+        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-brand-gold/10 text-brand-navy flex items-center justify-center">
+              <i data-lucide="graduation-cap" class="w-6 h-6 text-brand-gold"></i>
+            </div>
+            
+            <div>
+              <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Annual Academic Cycle</span>
+              <h3 class="text-2xl font-bold text-brand-navy font-heading mt-1">Education Scholarships</h3>
+            </div>
+
+            <p class="text-slate-600 text-sm leading-relaxed">
+              We remove every financial barrier preventing children from attending school, fostering independence and critical thinking.
+            </p>
+
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 pt-2">
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
+                <span>Tuition support & school-related fee coverage</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
+                <span>Tailored school uniforms & durable shoes</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
+                <span>Backpacks, curriculum textbooks & stationery kits</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
+                <span>One-on-one student mentorship & guidance</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-500">“Educated Children”</span>
+            <a href="#give" class="text-xs font-bold text-brand-navy hover:text-brand-gold transition flex items-center gap-1">
+              Sponsor a Student &rarr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AUTHENTIC STORIES & FIELD PHOTOGRAPHY -->
+  <section id="stories" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="text-brand-gold font-bold text-xs uppercase tracking-widest">Field Perspectives</span>
+          <h2 class="text-3xl font-extrabold text-brand-navy font-heading mt-1">
+            Real Lives, Real Hope
+          </h2>
+        </div>
+        <p class="text-slate-500 text-sm max-w-sm">
+          Authentic moments from our community consultations and rural outreach in West Africa.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Story 1 -->
+        <div class="space-y-3">
+          <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-slate-100 border border-slate-200">
+            <img src="assets/img/outreach-consultation.jpg" alt="Medical consultation in rural Africa" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+          </div>
+          <h3 class="font-bold text-brand-navy text-base font-heading">Healthcare at the Doorstep</h3>
+          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+            Healthcare workers taking clinical time to listen, diagnose, and provide free medicines to rural families.
+          </p>
+        </div>
+
+        <!-- Story 2 -->
+        <div class="space-y-3">
+          <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-slate-100 border border-slate-200">
+            <img src="assets/img/community-family.jpg" alt="Protected African family" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+          </div>
+          <h3 class="font-bold text-brand-navy text-base font-heading">Dignity for Families</h3>
+          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+            Multi-generational families receiving the health education and support needed to thrive together.
+          </p>
+        </div>
+
+        <!-- Story 3 -->
+        <div class="space-y-3">
+          <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-slate-100 border border-slate-200">
+            <img src="assets/img/village-children.jpg" alt="Children in African village" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+          </div>
+          <h3 class="font-bold text-brand-navy text-base font-heading">Brightening Young Futures</h3>
+          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+            Ensuring the youngest boys and girls in remote villages have the school supplies and fees to stay in class.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SMART GIVING / IMPACT SECTION -->
+  <section id="give" class="py-20 bg-brand-navy text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+      
+      <div class="space-y-3 max-w-xl mx-auto">
+        <span class="text-brand-gold-light font-bold text-xs uppercase tracking-widest">Support The Mission</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading">
+          Make a Direct Grassroots Impact
+        </h2>
+        <p class="text-slate-300 text-sm">
+          Every contribution goes directly to patient screenings, prescription medicines, and student school supplies.
+        </p>
+      </div>
+
+      <!-- Clean Giving Card -->
+      <div class="bg-white rounded-3xl p-6 sm:p-10 text-slate-800 text-left shadow-2xl border border-white/20">
+        
+        <!-- Amount Selector -->
+        <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Choose a Gift Amount</label>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+          <button class="amt-btn py-3 px-4 rounded-xl font-bold text-base border transition bg-white text-brand-navy border-slate-200 hover:border-brand-gold" data-amt="25">
+            $25
+          </button>
+          <button class="amt-btn py-3 px-4 rounded-xl font-bold text-base border transition bg-brand-navy text-white border-brand-navy" data-amt="50">
+            $50
+          </button>
+          <button class="amt-btn py-3 px-4 rounded-xl font-bold text-base border transition bg-white text-brand-navy border-slate-200 hover:border-brand-gold" data-amt="100">
+            $100
+          </button>
+          <button class="amt-btn py-3 px-4 rounded-xl font-bold text-base border transition bg-white text-brand-navy border-slate-200 hover:border-brand-gold" data-amt="250">
+            $250
+          </button>
+        </div>
+
+        <!-- Impact Description -->
+        <div class="p-4 rounded-xl bg-brand-cream border border-slate-200/80 mb-6">
+          <p id="amtDesc" class="text-sm text-slate-700 font-medium">
+            <strong>$50 Gift:</strong> Funds medical consultations, malaria tests, and essential prescription medicines for 2 rural families.
+          </p>
+        </div>
+
+        <!-- Action Button -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-2 text-xs text-slate-500">
+            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+            <span>Accountable Christian Humanitarian Initiative</span>
+          </div>
+          <a href="#contact" class="w-full sm:w-auto btn-gold px-8 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider text-white text-center">
+            Complete Contribution
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GET INVOLVED / CONTACT: SIMPLE & SMART -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-brand-cream rounded-3xl p-8 sm:p-12 border border-slate-200">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          
+          <div class="space-y-4">
+            <span class="text-brand-gold font-bold text-xs uppercase tracking-widest">Connect With Us</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy font-heading">
+              Join Hands With AfriWell Bridge
+            </h2>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              We welcome healthcare professionals, teachers, church partners, diaspora members, and sponsors.
+            </p>
+            <div class="space-y-2 pt-2 text-xs text-slate-600">
+              <div class="flex items-center gap-2">
+                <i data-lucide="mail" class="w-4 h-4 text-brand-gold"></i>
+                <span class="font-medium">contact@afriwellbridge.org</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4 text-brand-gold"></i>
+                <span class="font-medium">USA & Rural West Africa</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Simple Contact Form -->
+          <form id="simpleContactForm" class="bg-white p-6 rounded-2xl border border-slate-200 space-y-3 shadow-sm">
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Your Name</label>
+              <input type="text" required placeholder="John Doe" class="w-full px-3 py-2 rounded-lg border border-slate-200 text-xs focus:outline-none focus:ring-1 focus:ring-brand-gold">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Email</label>
+              <input type="email" required placeholder="john@example.com" class="w-full px-3 py-2 rounded-lg border border-slate-200 text-xs focus:outline-none focus:ring-1 focus:ring-brand-gold">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">How would you like to participate?</label>
+              <select class="w-full px-3 py-2 rounded-lg border border-slate-200 text-xs focus:outline-none focus:ring-1 focus:ring-brand-gold">
+                <option>Volunteer as Medical Professional</option>
+                <option>Education / Mentorship Volunteer</option>
+                <option>Church / Ministry Partner</option>
+                <option>Diaspora Supporter</option>
+                <option>Financial Support / Grant</option>
+              </select>
+            </div>
+            <button type="submit" class="w-full btn-navy py-2.5 rounded-lg font-bold text-xs uppercase tracking-wider text-white">
+              Send Inquiry
+            </button>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MINIMAL FOOTER -->
+  <footer class="bg-white py-12 border-t border-slate-100 text-slate-500 text-xs">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-4">
+        <img src="assets/img/logo-light.svg" alt="AfriWell Bridge" class="h-8 w-auto">
+        <span class="text-slate-400">|</span>
+        <span>Galatians 6:10</span>
+      </div>
+
+      <p>&copy; 2026 AfriWell Bridge (AWB). Living out the Gospel through healthcare & education.</p>
+
+    </div>
+  </footer>
+
+  <!-- SIMPLE SCRIPT -->
+  <script>
+    // Initialize icons
+    lucide.createIcons();
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      mobileMenu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+      });
+    }
+
+    // Smart donation amount switcher
+    const amtButtons = document.querySelectorAll('.amt-btn');
+    const amtDesc = document.getElementById('amtDesc');
+    const descriptions = {
+      '25': '<strong>$25 Gift:</strong> Provides a durable backpack, notebooks, and writing materials for a rural student for an entire school year.',
+      '50': '<strong>$50 Gift:</strong> Funds medical consultations, malaria tests, and essential prescription medicines for 2 rural families.',
+      '100': '<strong>$100 Gift:</strong> Covers a full academic scholarship, tailor-made uniform, and textbooks for a vulnerable child.',
+      '250': '<strong>$250 Gift:</strong> Supplies diagnostic equipment, rapid test kits, and emergency surgical referral transport for mobile clinics.'
+    };
+
+    amtButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        amtButtons.forEach(b => {
+          b.classList.remove('bg-brand-navy', 'text-white', 'border-brand-navy');
+          b.classList.add('bg-white', 'text-brand-navy', 'border-slate-200');
+        });
+        btn.classList.add('bg-brand-navy', 'text-white', 'border-brand-navy');
+        btn.classList.remove('bg-white', 'text-brand-navy', 'border-slate-200');
+
+        const val = btn.dataset.amt;
+        if (descriptions[val] && amtDesc) {
+          amtDesc.innerHTML = descriptions[val];
+        }
+      });
+    });
+
+    // Simple contact alert
+    const contactForm = document.getElementById('simpleContactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you! Your inquiry has been received. Our team will be in touch shortly.');
+        contactForm.reset();
+      });
+    }
+  </script>
+</body>
+</html>
