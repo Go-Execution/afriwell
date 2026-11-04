@@ -1,244 +1,192 @@
-// AfriWell Bridge - Interactive Features Script
+// AfriWell Bridge (AWB) - Interactive Behaviors
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Mobile Menu Toggle
-  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  // Mobile Menu
+  const menuBtn = document.getElementById('menuBtn');
   const mobileMenu = document.getElementById('mobileMenu');
-  
-  if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener('click', () => {
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
-
-    // Close on link click
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => mobileMenu.classList.add('hidden'));
     });
   }
 
-  // Sticky Header Shadow
-  const navbar = document.getElementById('mainNavbar');
+  // Sticky Header elevation
+  const navbar = document.getElementById('mainHeader');
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
+    if (window.scrollY > 20) {
       navbar.classList.add('shadow-md');
     } else {
       navbar.classList.remove('shadow-md');
     }
   });
 
-  // Flagship Programs Tab Switcher
-  const tabMedical = document.getElementById('tabMedical');
-  const tabEducation = document.getElementById('tabEducation');
-  const contentMedical = document.getElementById('contentMedical');
-  const contentEducation = document.getElementById('contentEducation');
+  // Scholarship Portal Tabs: New Application vs Continuing Scholar Report
+  const tabNewApp = document.getElementById('tabNewApp');
+  const tabContinuing = document.getElementById('tabContinuing');
+  const paneNewApp = document.getElementById('paneNewApp');
+  const paneContinuing = document.getElementById('paneContinuing');
 
-  if (tabMedical && tabEducation && contentMedical && contentEducation) {
-    tabMedical.addEventListener('click', () => {
-      tabMedical.classList.add('bg-white', 'text-brand-navy', 'shadow-sm', 'border-brand-gold');
-      tabMedical.classList.remove('text-gray-500', 'border-transparent');
-      
-      tabEducation.classList.remove('bg-white', 'text-brand-navy', 'shadow-sm', 'border-brand-gold');
-      tabEducation.classList.add('text-gray-500', 'border-transparent');
+  if (tabNewApp && tabContinuing && paneNewApp && paneContinuing) {
+    tabNewApp.addEventListener('click', () => {
+      tabNewApp.classList.add('bg-brand-navy', 'text-white', 'shadow');
+      tabNewApp.classList.remove('bg-white', 'text-slate-600', 'hover:bg-slate-50');
 
-      contentMedical.classList.remove('hidden');
-      contentEducation.classList.add('hidden');
+      tabContinuing.classList.remove('bg-brand-navy', 'text-white', 'shadow');
+      tabContinuing.classList.add('bg-white', 'text-slate-600', 'hover:bg-slate-50');
+
+      paneNewApp.classList.remove('hidden');
+      paneContinuing.classList.add('hidden');
     });
 
-    tabEducation.addEventListener('click', () => {
-      tabEducation.classList.add('bg-white', 'text-brand-navy', 'shadow-sm', 'border-brand-gold');
-      tabEducation.classList.remove('text-gray-500', 'border-transparent');
-      
-      tabMedical.classList.remove('bg-white', 'text-brand-navy', 'shadow-sm', 'border-brand-gold');
-      tabMedical.classList.add('text-gray-500', 'border-transparent');
+    tabContinuing.addEventListener('click', () => {
+      tabContinuing.classList.add('bg-brand-navy', 'text-white', 'shadow');
+      tabContinuing.classList.remove('bg-white', 'text-slate-600', 'hover:bg-slate-50');
 
-      contentEducation.classList.remove('hidden');
-      contentMedical.classList.add('hidden');
+      tabNewApp.classList.remove('bg-brand-navy', 'text-white', 'shadow');
+      tabNewApp.classList.add('bg-white', 'text-slate-600', 'hover:bg-slate-50');
+
+      paneContinuing.classList.remove('hidden');
+      paneNewApp.classList.add('hidden');
     });
   }
 
-  // Interactive Donation Calculator
-  const donationTiers = [
-    {
-      amount: 25,
-      title: 'School Bag & Learning Kit',
-      desc: 'Provides 1 child with a durable backpack, notebook set, stationery, and learning essentials for an entire academic year.'
-    },
-    {
-      amount: 50,
-      title: 'Rural Health Screening & Medicines',
-      desc: 'Funds comprehensive blood pressure, blood glucose, and malaria testing, plus essential prescription meds for 2 families.'
-    },
-    {
-      amount: 150,
-      title: 'Full Student Annual Sponsorship',
-      desc: 'Covers a child’s school fees, new school uniform, pair of shoes, all course textbooks, and personalized volunteer mentorship.'
-    },
-    {
-      amount: 500,
-      title: 'Mobile Outreach Clinic Station',
-      desc: 'Supplies medical testing equipment, diagnostic test kits, and emergency surgical referral transport for rural remote villages.'
-    }
-  ];
-
-  const tierButtons = document.querySelectorAll('.tier-btn');
-  const customAmountInput = document.getElementById('customAmountInput');
-  const impactTitle = document.getElementById('impactTitle');
-  const impactDesc = document.getElementById('impactDesc');
-  const selectedAmountDisplay = document.getElementById('selectedAmountDisplay');
-  let currentAmount = 50;
-
-  function updateImpact(amount) {
-    currentAmount = amount;
-    if (selectedAmountDisplay) {
-      selectedAmountDisplay.textContent = `$${amount}`;
-    }
-
-    const matchedTier = donationTiers.find(t => t.amount === amount);
-    if (matchedTier) {
-      if (impactTitle) impactTitle.textContent = matchedTier.title;
-      if (impactDesc) impactDesc.textContent = matchedTier.desc;
-    } else {
-      if (impactTitle) impactTitle.textContent = 'Custom Grassroots Impact';
-      if (impactDesc) impactDesc.textContent = `Your compassionate contribution of $${amount} directly advances Christ’s healing and educational ministry across hard-to-reach African communities.`;
-    }
-  }
-
-  tierButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      tierButtons.forEach(b => {
-        b.classList.remove('bg-brand-navy', 'text-white', 'border-brand-navy');
-        b.classList.add('bg-white', 'text-brand-navy', 'border-gray-200');
-      });
-
-      btn.classList.add('bg-brand-navy', 'text-white', 'border-brand-navy');
-      btn.classList.remove('bg-white', 'text-brand-navy', 'border-gray-200');
-
-      if (customAmountInput) customAmountInput.value = '';
-
-      const amt = parseInt(btn.dataset.amount, 10);
-      updateImpact(amt);
-    });
-  });
-
-  if (customAmountInput) {
-    customAmountInput.addEventListener('input', (e) => {
-      const val = parseInt(e.target.value, 10);
-      if (val && val > 0) {
-        tierButtons.forEach(b => {
-          b.classList.remove('bg-brand-navy', 'text-white', 'border-brand-navy');
-          b.classList.add('bg-white', 'text-brand-navy', 'border-gray-200');
-        });
-        updateImpact(val);
+  // File Upload Handlers (for both forms)
+  function setupFileInput(inputElement, previewElement) {
+    if (!inputElement || !previewElement) return;
+    inputElement.addEventListener('change', (e) => {
+      const files = Array.from(e.target.files);
+      if (files.length > 0) {
+        previewElement.innerHTML = files.map(f => `
+          <div class="flex items-center justify-between text-xs py-1.5 px-3 bg-emerald-50 text-emerald-800 rounded-lg border border-emerald-200 mt-1">
+            <span class="truncate font-medium">${f.name}</span>
+            <span class="text-[10px] text-emerald-600 ml-2 font-mono">${(f.size / (1024 * 1024)).toFixed(2)} MB</span>
+          </div>
+        `).join('');
+      } else {
+        previewElement.innerHTML = '';
       }
     });
   }
 
-  // Modals (Volunteer & Donate)
-  const volunteerModal = document.getElementById('volunteerModal');
-  const donateModal = document.getElementById('donateModal');
-  const openVolunteerBtns = document.querySelectorAll('.open-volunteer-btn');
-  const openDonateBtns = document.querySelectorAll('.open-donate-btn');
-  const closeVolunteerBtn = document.getElementById('closeVolunteerBtn');
-  const closeDonateBtn = document.getElementById('closeDonateBtn');
+  setupFileInput(document.getElementById('newAppFiles'), document.getElementById('newAppFilePreview'));
+  setupFileInput(document.getElementById('reportFiles'), document.getElementById('reportFilePreview'));
 
-  function openModal(modal) {
-    if (!modal) return;
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeModal(modal) {
-    if (!modal) return;
-    modal.classList.add('hidden');
-    modal.classList.remove('flex');
-    document.body.style.overflow = 'auto';
-  }
-
-  openVolunteerBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      openModal(volunteerModal);
-    });
-  });
-
-  openDonateBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      openModal(donateModal);
-    });
-  });
-
-  if (closeVolunteerBtn) {
-    closeVolunteerBtn.addEventListener('click', () => closeModal(volunteerModal));
-  }
-  if (closeDonateBtn) {
-    closeDonateBtn.addEventListener('click', () => closeModal(donateModal));
-  }
-
-  [volunteerModal, donateModal].forEach(modal => {
-    if (modal) {
-      modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-          closeModal(modal);
-        }
-      });
+  // Donation Tier Logic (Matched to Client's exact $25, $50, $100 descriptions)
+  const donationTiers = {
+    '25': {
+      title: 'School Supplies Support',
+      desc: 'Helps provide basic school supplies such as notebooks, pens, pencils, and other learning materials for a child in need.'
+    },
+    '50': {
+      title: 'Uniforms and Shoes',
+      desc: 'Helps support school uniforms, shoes, and other essential items that allow a child to attend school with dignity.'
+    },
+    '100': {
+      title: 'School Fees Assistance',
+      desc: 'Helps reduce the burden of school fees and keeps a student on the path of education and hope.'
+    },
+    '250': {
+      title: 'Rural Clinic & Medicines',
+      desc: 'Funds comprehensive medical triage, blood glucose/malaria diagnostic testing, and essential prescription meds for rural families.'
+    },
+    '500': {
+      title: 'Surgical Referral & Mobile Station',
+      desc: 'Covers specialized hospital referrals for hernia or cataract surgeries, plus transport and surgical logistics for rural patients.'
     }
+  };
+
+  const tierCards = document.querySelectorAll('.tier-card');
+  const customDonationInput = document.getElementById('customDonationInput');
+  const selectedAmountDisplay = document.getElementById('selectedAmountDisplay');
+  const selectedTierTitle = document.getElementById('selectedTierTitle');
+  const selectedTierDesc = document.getElementById('selectedTierDesc');
+
+  function updateDonation(amount) {
+    if (selectedAmountDisplay) selectedAmountDisplay.textContent = `$${amount}`;
+
+    const data = donationTiers[amount.toString()];
+    if (data) {
+      if (selectedTierTitle) selectedTierTitle.textContent = data.title;
+      if (selectedTierDesc) selectedTierDesc.textContent = data.desc;
+    } else {
+      if (selectedTierTitle) selectedTierTitle.textContent = 'Custom Humanitarian Gift';
+      if (selectedTierDesc) selectedTierDesc.textContent = `Your compassionate contribution of $${amount} directly empowers rural African families with life-saving healthcare and life-changing education.`;
+    }
+  }
+
+  tierCards.forEach(card => {
+    card.addEventListener('click', () => {
+      tierCards.forEach(c => {
+        c.classList.remove('border-brand-gold', 'ring-2', 'ring-brand-gold', 'bg-brand-gold/5');
+        c.classList.add('border-slate-200');
+      });
+      card.classList.add('border-brand-gold', 'ring-2', 'ring-brand-gold', 'bg-brand-gold/5');
+      card.classList.remove('border-slate-200');
+
+      if (customDonationInput) customDonationInput.value = '';
+      const amt = card.dataset.amount;
+      updateDonation(amt);
+    });
   });
 
-  // Handle Form Submissions with Toast
-  const volunteerForm = document.getElementById('volunteerForm');
-  const contactForm = document.getElementById('contactForm');
-  const toast = document.getElementById('toast');
+  if (customDonationInput) {
+    customDonationInput.addEventListener('input', (e) => {
+      const val = parseInt(e.target.value, 10);
+      if (val && val > 0) {
+        tierCards.forEach(c => {
+          c.classList.remove('border-brand-gold', 'ring-2', 'ring-brand-gold', 'bg-brand-gold/5');
+          c.classList.add('border-slate-200');
+        });
+        updateDonation(val);
+      }
+    });
+  }
 
+  // Toast System
+  const toast = document.getElementById('toast');
   function showToast(message) {
     if (!toast) return;
     toast.textContent = message;
     toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
     toast.classList.add('opacity-100', 'translate-y-0');
-
     setTimeout(() => {
       toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
       toast.classList.remove('opacity-100', 'translate-y-0');
     }, 4500);
   }
 
-  if (volunteerForm) {
-    volunteerForm.addEventListener('submit', (e) => {
+  // Form Submissions
+  const formNewApp = document.getElementById('formNewApp');
+  if (formNewApp) {
+    formNewApp.addEventListener('submit', (e) => {
       e.preventDefault();
-      closeModal(volunteerModal);
-      showToast('Thank you! Your volunteer application has been received. Our team will contact you shortly.');
-      volunteerForm.reset();
+      showToast('Thank you! Your scholarship application and transcripts have been successfully submitted for review.');
+      formNewApp.reset();
+      const preview = document.getElementById('newAppFilePreview');
+      if (preview) preview.innerHTML = '';
     });
   }
 
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+  const formContinuing = document.getElementById('formContinuing');
+  if (formContinuing) {
+    formContinuing.addEventListener('submit', (e) => {
       e.preventDefault();
-      showToast('Thank you! Your message has been sent to the AfriWell Bridge team.');
-      contactForm.reset();
+      showToast('Academic report received! Your semester records have been updated in the AfriWell Bridge scholar system.');
+      formContinuing.reset();
+      const preview = document.getElementById('reportFilePreview');
+      if (preview) preview.innerHTML = '';
     });
   }
 
-  // FAQ Accordion
-  const faqQuestions = document.querySelectorAll('.faq-question');
-  faqQuestions.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const answer = btn.nextElementSibling;
-      const icon = btn.querySelector('.faq-icon');
-      
-      const isOpen = !answer.classList.contains('hidden');
-      
-      // Close all
-      document.querySelectorAll('.faq-answer').forEach(a => a.classList.add('hidden'));
-      document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = 'rotate(0deg)');
-
-      if (!isOpen) {
-        answer.classList.remove('hidden');
-        if (icon) icon.style.transform = 'rotate(180deg)';
-      }
+  const generalContactForm = document.getElementById('generalContactForm');
+  if (generalContactForm) {
+    generalContactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      showToast('Thank you for contacting AfriWell Bridge. A representative will reach out to you shortly.');
+      generalContactForm.reset();
     });
-  });
+  }
 });

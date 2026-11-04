@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AfriWell Bridge | Healing & Education for Rural Africa</title>
-  <meta name="description" content="Living out Christ's healing and teaching ministry through free rural medical outreach and education scholarships in Africa.">
+  <title>AfriWell Bridge | Healing, Hope & Education for Rural Africa</title>
+  <meta name="description" content="Living out the Gospel by furthering Christ's healing and teaching ministry to bring wholeness through healthcare and education across rural Africa.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="alternate icon" href="favicon.ico">
 
   <!-- Google Fonts: Archivo & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -23,11 +23,13 @@
             brand: {
               navy: '#13284F',
               'navy-dark': '#0A1730',
+              'navy-light': '#1E3D75',
               gold: '#B8902F',
               'gold-light': '#D9B25A',
+              'gold-soft': '#FBF6EC',
               cream: '#F8F6F2',
               'cream-light': '#FAF9F6',
-              slate: '#475569',
+              slate: '#334155',
             }
           },
           fontFamily: {
@@ -42,172 +44,230 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <style>
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      color: #1E293B;
-      background-color: #FFFFFF;
-    }
-    h1, h2, h3, h4, .font-heading {
-      font-family: 'Archivo', sans-serif;
-      letter-spacing: -0.02em;
-    }
-    .btn-gold {
-      background-color: #B8902F;
-      color: #FFFFFF;
-      transition: all 0.2s ease;
-    }
-    .btn-gold:hover {
-      background-color: #9C7722;
-      transform: translateY(-1px);
-    }
-    .btn-navy {
-      background-color: #13284F;
-      color: #FFFFFF;
-      transition: all 0.2s ease;
-    }
-    .btn-navy:hover {
-      background-color: #0A1730;
-      transform: translateY(-1px);
-    }
-  </style>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/custom.css">
 </head>
-<body class="selection:bg-brand-gold selection:text-white antialiased">
+<body class="selection:bg-brand-gold selection:text-white antialiased text-slate-800 bg-[#FCFCFA]">
 
-  <!-- SMART MINIMAL NAVBAR -->
-  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 transition-all">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- TOP UTILITY & HELPLINE BAR (Colorectal Cancer Alliance Style) -->
+  <div class="bg-brand-navy-dark text-slate-300 text-xs py-2 px-4 border-b border-brand-navy/60">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-2 text-center sm:text-left">
+        <span class="inline-block px-2 py-0.5 rounded bg-brand-gold text-white font-bold text-[10px] tracking-wide uppercase">2026 Initiative</span>
+        <span class="text-slate-200">Annual Rural Medical Outreach & Education Sponsorship Drive • West Africa</span>
+      </div>
+      <div class="flex items-center gap-5 text-xs text-slate-300">
+        <a href="#scholarships" class="hover:text-brand-gold-light transition flex items-center gap-1">
+          <i data-lucide="graduation-cap" class="w-3.5 h-3.5 text-brand-gold-light"></i>
+          <span>Scholar Portal</span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <a href="#leadership" class="hover:text-brand-gold-light transition flex items-center gap-1">
+          <i data-lucide="users" class="w-3.5 h-3.5 text-brand-gold-light"></i>
+          <span>Our Team</span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <span class="flex items-center gap-1 font-semibold text-brand-gold-light">
+          <i data-lucide="heart" class="w-3.5 h-3.5"></i> Galatians 6:10
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN HEADER NAVIGATION -->
+  <header id="mainHeader" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
-        <!-- Logo -->
-        <a href="#" class="flex items-center">
-          <img src="assets/img/logo-light.svg" alt="AfriWell Bridge" class="h-11 sm:h-12 w-auto">
+        <!-- 3D Brand Logo -->
+        <a href="#" class="flex items-center gap-3">
+          <div class="relative py-1">
+            <img src="assets/img/logo-3d.jpg" alt="AfriWell Bridge 3D Logo" class="h-12 sm:h-14 w-auto object-contain rounded-lg shadow-sm border border-slate-100">
+          </div>
         </a>
 
-        <!-- Clean Desktop Nav -->
-        <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
-          <a href="#about" class="hover:text-brand-navy transition">Mission</a>
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700">
+          <a href="#about" class="hover:text-brand-navy transition">About Us</a>
           <a href="#programs" class="hover:text-brand-navy transition">Programs</a>
-          <a href="#impact" class="hover:text-brand-navy transition">Impact</a>
+          <a href="#scholarships" class="text-brand-navy font-bold flex items-center gap-1 hover:text-brand-gold transition">
+            <span>Scholarships</span>
+            <span class="px-1.5 py-0.5 rounded text-[10px] bg-brand-gold/15 text-brand-gold font-bold">Apply & Reports</span>
+          </a>
+          <a href="#leadership" class="hover:text-brand-navy transition">Leadership & Team</a>
+          <a href="#impact" class="hover:text-brand-navy transition">Giving & Impact</a>
           <a href="#stories" class="hover:text-brand-navy transition">Stories</a>
           <a href="#contact" class="hover:text-brand-navy transition">Contact</a>
         </nav>
 
-        <!-- Primary Action -->
-        <div class="flex items-center gap-3">
-          <a href="#give" class="btn-navy px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider">
-            Support Us
+        <!-- Header CTA Buttons -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="#scholarships" class="px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-brand-navy border border-brand-navy/30 hover:bg-slate-50 transition">
+            Apply / Upload
           </a>
-          <!-- Mobile Menu Button -->
-          <button id="menuBtn" class="md:hidden p-2 text-slate-700 hover:text-brand-navy" aria-label="Toggle menu">
-            <i data-lucide="menu" class="w-6 h-6"></i>
-          </button>
+          <a href="#impact" class="btn-gold px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-white flex items-center gap-1.5">
+            <i data-lucide="heart" class="w-3.5 h-3.5 fill-white"></i>
+            <span>Donate</span>
+          </a>
         </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn" class="lg:hidden p-2 text-slate-700 hover:text-brand-navy" aria-label="Toggle navigation">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
 
       </div>
     </div>
 
     <!-- Mobile Nav Dropdown -->
-    <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-100 px-6 py-4 space-y-3 text-sm font-semibold text-slate-700">
-      <a href="#about" class="block py-1 hover:text-brand-navy">Mission</a>
-      <a href="#programs" class="block py-1 hover:text-brand-navy">Programs</a>
-      <a href="#impact" class="block py-1 hover:text-brand-navy">Impact</a>
-      <a href="#stories" class="block py-1 hover:text-brand-navy">Stories</a>
-      <a href="#contact" class="block py-1 hover:text-brand-navy">Contact</a>
-      <div class="pt-2">
-        <a href="#give" class="block w-full text-center btn-gold py-2.5 rounded-full text-xs font-bold uppercase tracking-wider">Support Us</a>
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3 text-sm font-semibold text-slate-700">
+      <a href="#about" class="block py-1 hover:text-brand-navy">About Us</a>
+      <a href="#programs" class="block py-1 hover:text-brand-navy">Flagship Programs</a>
+      <a href="#scholarships" class="block py-1 text-brand-navy font-bold">Scholarship Portal (Apply & Upload Reports)</a>
+      <a href="#leadership" class="block py-1 hover:text-brand-navy">Leadership & Organogram</a>
+      <a href="#impact" class="block py-1 hover:text-brand-navy">Giving & Impact</a>
+      <a href="#stories" class="block py-1 hover:text-brand-navy">Field Stories</a>
+      <a href="#contact" class="block py-1 hover:text-brand-navy">Contact & Volunteer</a>
+      <div class="pt-2 flex flex-col gap-2">
+        <a href="#scholarships" class="block text-center py-2.5 rounded-xl border border-brand-navy text-brand-navy text-xs font-bold uppercase tracking-wider">Scholarship Application & Reports</a>
+        <a href="#impact" class="block text-center btn-gold py-2.5 rounded-xl text-white text-xs font-bold uppercase tracking-wider">Support Our Mission</a>
       </div>
     </div>
   </header>
 
-  <!-- HERO SECTION: SMART, CLEAN & AIRY -->
-  <section class="pt-12 pb-16 sm:pt-20 sm:pb-24 bg-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- HERO SECTION: IMPACT-FOCUSED & ACTIONABLE -->
+  <section class="relative pt-8 pb-16 lg:pt-14 lg:pb-24 bg-gradient-to-b from-brand-cream/60 via-white to-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="max-w-3xl mx-auto text-center space-y-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
-        <!-- Subtle Pill -->
-        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-cream border border-slate-200 text-brand-navy text-xs font-bold tracking-wide">
-          <span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
-          Christian Humanitarian Service • West Africa
+        <!-- Left: Headline & Rationale -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/30 text-brand-navy text-xs font-bold tracking-wide">
+            <span class="w-2 h-2 rounded-full bg-brand-gold"></span>
+            Faith in Action • Galatians 6:10 • West Africa Focus
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-navy leading-[1.12] tracking-tight font-heading">
+            Healing the Sick. <br>
+            Educating Children. <br>
+            <span class="text-brand-gold">Restoring Hope.</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Living out the Gospel by furthering Christ’s healing and teaching ministry. AfriWell Bridge (AWB) delivers free mobile medical outreaches, surgical referrals, and comprehensive academic scholarships to underserved rural communities.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
+            <a href="#scholarships" class="w-full sm:w-auto btn-navy px-7 py-4 rounded-full font-bold text-xs uppercase tracking-wider text-white shadow-md flex items-center justify-center gap-2">
+              <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+              <span>Scholarship Portal</span>
+            </a>
+            <a href="#impact" class="w-full sm:w-auto btn-gold px-7 py-4 rounded-full font-bold text-xs uppercase tracking-wider text-white shadow-md flex items-center justify-center gap-2">
+              <i data-lucide="heart" class="w-4 h-4 fill-white"></i>
+              <span>Support Our Mission</span>
+            </a>
+            <a href="#programs" class="w-full sm:w-auto px-6 py-4 rounded-full font-bold text-xs uppercase tracking-wider text-brand-navy hover:bg-slate-50 transition border border-slate-200">
+              Explore Programs
+            </a>
+          </div>
+
+          <!-- Scripture Pill -->
+          <div class="pt-4 border-t border-slate-200/80 text-left max-w-lg mx-auto lg:mx-0">
+            <p class="text-xs italic text-slate-600 leading-normal">
+              “As we have therefore opportunities, let us do good unto all men, most especially unto those who are of the household of faith.”
+            </p>
+            <p class="text-[11px] font-bold text-brand-gold font-heading mt-0.5">— Galatians 6:10</p>
+          </div>
+
         </div>
 
-        <!-- Headline -->
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-navy leading-[1.15] tracking-tight">
-          Healing, Hope & Education for Rural Africa.
-        </h1>
-
-        <!-- Subheadline -->
-        <p class="text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-2xl mx-auto">
-          Living out the Gospel by furthering Christ’s healing and teaching ministry. We provide free rural medical care and education scholarships where access is needed most.
-        </p>
-
-        <!-- Actions -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-          <a href="#give" class="w-full sm:w-auto btn-gold px-8 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider text-white shadow-sm">
-            Support Our Mission
-          </a>
-          <a href="#programs" class="w-full sm:w-auto px-6 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider text-brand-navy hover:bg-slate-50 transition border border-slate-200">
-            Explore Programs
-          </a>
-        </div>
-
-      </div>
-
-      <!-- Hero Visual: One Clean Authentic Frame -->
-      <div class="mt-12 sm:mt-16 max-w-4xl mx-auto">
-        <div class="relative rounded-3xl overflow-hidden shadow-lg border border-slate-100">
-          <img src="assets/img/community-family.jpg" alt="African community members and children" class="w-full h-[320px] sm:h-[460px] object-cover">
-          <div class="absolute inset-0 bg-gradient-to-t from-brand-navy-dark/70 via-transparent to-transparent flex items-end p-6 sm:p-10">
-            <div class="text-white">
-              <span class="text-xs uppercase font-bold tracking-wider text-brand-gold-light">Our Vision</span>
-              <p class="text-lg sm:text-2xl font-bold font-heading mt-0.5">
-                “Healthy Communities, Educated Children, Hopeful Futures.”
-              </p>
+        <!-- Right: Primary Community Photo -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100">
+            <img src="assets/img/community-family.jpg" alt="African community members and children" class="w-full h-[420px] object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-navy-dark/85 via-brand-navy-dark/20 to-transparent flex items-end p-6">
+              <div class="text-white space-y-1">
+                <span class="inline-block px-2.5 py-0.5 rounded bg-brand-gold text-white text-[10px] font-bold uppercase tracking-wider">Foundation Vision</span>
+                <p class="text-lg sm:text-xl font-bold font-heading">
+                  “Healthy Communities, Educated Children, Hopeful Futures.”
+                </p>
+              </div>
             </div>
           </div>
         </div>
+
       </div>
 
     </div>
   </section>
 
-  <!-- SCRIPTURE ANCHOR: MINIMAL & POIGNANT -->
-  <section class="py-12 bg-brand-cream border-y border-slate-200/60">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-3">
-      <blockquote class="text-lg sm:text-xl font-medium text-slate-800 italic leading-relaxed">
-        “As we have therefore opportunities, let us do good unto all men, most especially unto those who are of the household of faith.”
-      </blockquote>
-      <div class="text-brand-gold font-bold text-xs uppercase tracking-widest font-heading">
-        Galatians 6:10
-      </div>
-    </div>
-  </section>
-
-  <!-- WHO WE ARE & THE GAP WE BRIDGE -->
-  <section id="about" class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- 4 FAST-TRIAGE PATHWAYS (Inspired by Colorectal Cancer Alliance) -->
+  <section class="py-12 bg-white border-y border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-16 items-center">
+      <div class="text-center max-w-xl mx-auto mb-8">
+        <span class="text-brand-gold font-bold text-xs uppercase tracking-widest">How Can We Serve You?</span>
+        <h2 class="text-2xl font-extrabold text-brand-navy font-heading mt-1">Direct Pathways to Care & Support</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         
-        <div class="md:col-span-5 space-y-4">
-          <span class="text-brand-gold font-bold text-xs uppercase tracking-widest">The Reality</span>
-          <h2 class="text-3xl font-extrabold text-brand-navy font-heading leading-tight">
-            Bridging the Distance to Care & Learning
-          </h2>
-          <div class="w-12 h-1 bg-brand-gold"></div>
+        <!-- Pathway 1: Rural Healthcare -->
+        <div class="p-6 rounded-2xl bg-brand-cream/60 border border-slate-200 hover-lift space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-navy text-brand-gold-light flex items-center justify-center">
+            <i data-lucide="stethoscope" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-brand-navy text-base font-heading">Need Healthcare?</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Free mobile doctor clinics, blood glucose & malaria testing, medicines, and surgical referrals.
+          </p>
+          <a href="#programs" class="inline-flex items-center gap-1 text-xs font-bold text-brand-navy hover:text-brand-gold pt-1">
+            <span>Medical Outreach</span> &rarr;
+          </a>
         </div>
 
-        <div class="md:col-span-7 space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
-          <p>
-            In rural African communities, poverty creates severe barriers to the two essentials every human deserves: health and education.
+        <!-- Pathway 2: Apply for Scholarship -->
+        <div class="p-6 rounded-2xl bg-brand-cream/60 border border-slate-200 hover-lift space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-gold text-white flex items-center justify-center">
+            <i data-lucide="award" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-brand-navy text-base font-heading">New Scholarship</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Tuition coverage, tailored uniforms, books, school bags, and academic mentorship for needy children.
           </p>
-          <p>
-            Families endure treatable conditions like hernia or malaria for years simply because transportation and hospital fees are unaffordable. Meanwhile, bright children are forced out of school when their families cannot afford uniforms, books, or bags.
+          <a href="#scholarships" class="inline-flex items-center gap-1 text-xs font-bold text-brand-navy hover:text-brand-gold pt-1">
+            <span>Submit Application</span> &rarr;
+          </a>
+        </div>
+
+        <!-- Pathway 3: Continuing Scholar Reports -->
+        <div class="p-6 rounded-2xl bg-brand-gold/10 border border-brand-gold/40 hover-lift space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-navy text-brand-gold flex items-center justify-center">
+            <i data-lucide="file-check" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-brand-navy text-base font-heading">Active Scholars</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Mandatory semester portal: upload your current academic report card and transcript to keep sponsorship active.
           </p>
-          <p class="font-medium text-slate-800">
-            AfriWell Bridge (AWB) steps directly into that gap—mobilizing healthcare professionals and providing education supplies with Christian compassion.
+          <a href="#scholarships" class="inline-flex items-center gap-1 text-xs font-bold text-brand-gold hover:text-brand-navy pt-1">
+            <span>Upload Semester Report</span> &rarr;
+          </a>
+        </div>
+
+        <!-- Pathway 4: Giving & Partnerships -->
+        <div class="p-6 rounded-2xl bg-brand-cream/60 border border-slate-200 hover-lift space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-navy-dark text-white flex items-center justify-center">
+            <i data-lucide="handshake" class="w-5 h-5 text-brand-gold"></i>
+          </div>
+          <h3 class="font-bold text-brand-navy text-base font-heading">Support & Partner</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Join as medical volunteers, donate school supply kits, or establish church & corporate sponsorships.
           </p>
+          <a href="#impact" class="inline-flex items-center gap-1 text-xs font-bold text-brand-navy hover:text-brand-gold pt-1">
+            <span>Ways to Give</span> &rarr;
+          </a>
         </div>
 
       </div>
@@ -215,69 +275,115 @@
     </div>
   </section>
 
-  <!-- TWO FLAGSHIP PROGRAMS: CLEAN 2-COLUMN -->
-  <section id="programs" class="py-20 bg-slate-50 border-t border-slate-200/60">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- ABOUT & FOUNDATION RATIONALE -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-5">
+          <span class="text-brand-gold font-bold text-xs uppercase tracking-widest">Frontline Healthcare Rationale</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy font-heading leading-tight">
+            Why AfriWell Bridge Was Established
+          </h2>
+          <div class="w-14 h-1 bg-brand-gold"></div>
+
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            During years of healthcare-sector experience as hospital administrators in West Africa, our founders encountered hundreds of individuals and families living for years with treatable conditions like hernia, cataracts, and chronic infections simply because they could not afford bus fare, consultation fees, or surgery.
+          </p>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Education faces the same devastating barrier. Bright children drop out of primary and secondary school not because of lack of ability, but because parents cannot afford simple school uniforms, shoes, exercise books, or exam fees.
+          </p>
+
+          <div class="p-5 rounded-2xl bg-brand-cream border border-slate-200 space-y-2">
+            <h4 class="font-bold text-brand-navy text-sm font-heading">Our Core Declaration</h4>
+            <p class="text-xs sm:text-sm text-slate-700 italic">
+              “Living out the Gospel by furthering Christ healing and teaching ministry to bring wholeness through healthcare and education to all men.”
+            </p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="rounded-3xl overflow-hidden shadow-xl border border-slate-200">
+            <img src="assets/img/outreach-consultation.jpg" alt="Doctor conducting field consultation" class="w-full h-80 sm:h-96 object-cover">
+            <div class="p-6 bg-brand-navy text-white space-y-2">
+              <span class="text-xs uppercase font-bold tracking-wider text-brand-gold-light">Grassroots Commitment</span>
+              <p class="text-sm font-medium">Reaching the last mile in rural counties where medical clinics and learning materials are scarce.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TWO FLAGSHIP PROGRAMS -->
+  <section id="programs" class="py-20 bg-slate-50 border-t border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-14 space-y-2">
-        <span class="text-brand-gold font-bold text-xs uppercase tracking-widest">Focused Interventions</span>
-        <h2 class="text-3xl font-extrabold text-brand-navy font-heading">
+        <span class="text-brand-gold font-bold text-xs uppercase tracking-widest">Intervention Strategy</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy font-heading">
           Our Two Flagship Programs
         </h2>
         <p class="text-slate-600 text-sm">
-          Practical, high-impact solutions addressing the root barriers in underserved rural communities.
+          Targeted, accountable programs addressing the two primary obstacles to human flourishing.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         
         <!-- Program 1: Medical Outreach -->
-        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between space-y-6">
-          <div class="space-y-4">
+        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between space-y-6 hover-lift">
+          <div class="space-y-5">
             <div class="w-12 h-12 rounded-2xl bg-brand-navy/5 text-brand-navy flex items-center justify-center">
               <i data-lucide="stethoscope" class="w-6 h-6 text-brand-gold"></i>
             </div>
             
             <div>
-              <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Annual 1-Month Mission</span>
+              <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Annual 1-Month Outreach</span>
               <h3 class="text-2xl font-bold text-brand-navy font-heading mt-1">Rural Medical Outreach</h3>
+              <p class="text-xs font-medium text-slate-500">“One Month of Healing and Hope”</p>
             </div>
 
             <p class="text-slate-600 text-sm leading-relaxed">
-              We bring doctors, nurses, and pharmacists directly to isolated villages to provide free medical consultations, screening, and treatment.
+              We mobilize licensed doctors, nurses, pharmacists, and lab specialists to conduct free clinics in underserved rural communities across West Africa.
             </p>
 
-            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 pt-2">
-              <li class="flex items-center gap-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
-                <span>Free doctor consultations & general medical triage</span>
-              </li>
-              <li class="flex items-center gap-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
-                <span>Blood pressure, glucose & malaria testing</span>
-              </li>
-              <li class="flex items-center gap-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
-                <span>Free prescription medication dispensing</span>
-              </li>
-              <li class="flex items-center gap-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
-                <span>Referral network for hernia & surgical hospital care</span>
-              </li>
-            </ul>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-slate-700">
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Free physician consultations
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Blood pressure & glucose checks
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Malaria testing & treatments
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Free essential prescription drugs
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Maternal & child health workshops
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Surgical hospital referral network
+              </div>
+            </div>
           </div>
 
           <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-            <span class="text-xs font-semibold text-slate-500">“Healing & Hope”</span>
-            <a href="#give" class="text-xs font-bold text-brand-navy hover:text-brand-gold transition flex items-center gap-1">
-              Support Healthcare &rarr;
+            <span class="text-xs text-slate-500">Need-based clinical care</span>
+            <a href="#contact" class="text-xs font-bold text-brand-navy hover:text-brand-gold transition flex items-center gap-1">
+              <span>Volunteer as Medical Pro</span> &rarr;
             </a>
           </div>
         </div>
 
-        <!-- Program 2: Education Scholarships -->
-        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between space-y-6">
-          <div class="space-y-4">
+        <!-- Program 2: Education Scholarship Program -->
+        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between space-y-6 hover-lift">
+          <div class="space-y-5">
             <div class="w-12 h-12 rounded-2xl bg-brand-gold/10 text-brand-navy flex items-center justify-center">
               <i data-lucide="graduation-cap" class="w-6 h-6 text-brand-gold"></i>
             </div>
@@ -285,36 +391,39 @@
             <div>
               <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Annual Academic Cycle</span>
               <h3 class="text-2xl font-bold text-brand-navy font-heading mt-1">Education Scholarships</h3>
+              <p class="text-xs font-medium text-slate-500">“Keeping Vulnerable Children in School”</p>
             </div>
 
             <p class="text-slate-600 text-sm leading-relaxed">
-              We remove every financial barrier preventing children from attending school, fostering independence and critical thinking.
+              We remove every financial barrier preventing students from completing school, fostering critical thinking, independence, and long-term dignity.
             </p>
 
-            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 pt-2">
-              <li class="flex items-center gap-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
-                <span>Tuition support & school-related fee coverage</span>
-              </li>
-              <li class="flex items-center gap-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
-                <span>Tailored school uniforms & durable shoes</span>
-              </li>
-              <li class="flex items-center gap-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
-                <span>Backpacks, curriculum textbooks & stationery kits</span>
-              </li>
-              <li class="flex items-center gap-2.5">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
-                <span>One-on-one student mentorship & guidance</span>
-              </li>
-            </ul>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-slate-700">
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Direct school fee grants
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Tailored uniforms & shoes
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Textbooks & notebook kits
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Durable school backpacks
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Semester report tracking
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> One-on-one student mentorship
+              </div>
+            </div>
           </div>
 
           <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-            <span class="text-xs font-semibold text-slate-500">“Educated Children”</span>
-            <a href="#give" class="text-xs font-bold text-brand-navy hover:text-brand-gold transition flex items-center gap-1">
-              Sponsor a Student &rarr;
+            <span class="text-xs text-slate-500">Merit & Need-based support</span>
+            <a href="#scholarships" class="text-xs font-bold text-brand-navy hover:text-brand-gold transition flex items-center gap-1">
+              <span>Go to Scholarship Portal</span> &rarr;
             </a>
           </div>
         </div>
@@ -324,15 +433,405 @@
     </div>
   </section>
 
-  <!-- AUTHENTIC STORIES & FIELD PHOTOGRAPHY -->
-  <section id="stories" class="py-20 bg-white">
+  <!-- DEDICATED SCHOLARSHIP & ACADEMIC REPORT PORTAL (CLIENT MANDATORY REQUIREMENT) -->
+  <section id="scholarships" class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
+        <span class="text-brand-gold font-bold text-xs uppercase tracking-widest">Official Academic Hub</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy font-heading">
+          Scholarship & Academic Reports Portal
+        </h2>
+        <p class="text-slate-600 text-sm">
+          Please select your pathway below: apply for a new scholarship, or submit your required semester academic report as an active AfriWell Bridge scholar.
+        </p>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="flex justify-center mb-8">
+        <div class="inline-flex p-1.5 rounded-2xl bg-slate-100 border border-slate-200 max-w-md w-full">
+          <button id="tabNewApp" class="flex-1 py-3 px-4 rounded-xl font-bold text-xs uppercase tracking-wider transition-all bg-brand-navy text-white shadow">
+            1. Apply for Scholarship
+          </button>
+          <button id="tabContinuing" class="flex-1 py-3 px-4 rounded-xl font-bold text-xs uppercase tracking-wider transition-all bg-white text-slate-600 hover:bg-slate-50">
+            2. Current Scholar Report
+          </button>
+        </div>
+      </div>
+
+      <!-- PANE 1: NEW SCHOLARSHIP APPLICATION FORM -->
+      <div id="paneNewApp" class="bg-brand-cream/50 rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm">
+        <div class="border-b border-slate-200 pb-5 mb-6">
+          <h3 class="text-xl font-bold text-brand-navy font-heading">New Student Scholarship Application</h3>
+          <p class="text-xs text-slate-600 mt-1">
+            For students in primary, secondary, or vocational institutions in need of financial sponsorship and educational support.
+          </p>
+        </div>
+
+        <form id="formNewApp" class="space-y-5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Student Full Name *</label>
+              <input type="text" required placeholder="Full legal name" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Email / WhatsApp Contact *</label>
+              <input type="text" required placeholder="Email or active phone number" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Country / County *</label>
+              <input type="text" required placeholder="e.g. West Africa / County" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">School / Institution Name *</label>
+              <input type="text" required placeholder="Name of school" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Current Grade / Class Level *</label>
+              <input type="text" required placeholder="e.g. Grade 9, SS2, Form 3" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">Brief Statement of Financial Need *</label>
+            <textarea rows="3" required placeholder="Please describe family background, financial challenges, and how this scholarship will assist you." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold"></textarea>
+          </div>
+
+          <!-- Document Upload Box (Transcripts, Certificates) -->
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">
+              Upload Official Academic Transcripts / Report Cards *
+            </label>
+            <div class="dropzone p-6 rounded-2xl bg-white text-center cursor-pointer relative">
+              <input type="file" id="newAppFiles" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
+              <div class="space-y-1">
+                <i data-lucide="upload-cloud" class="w-8 h-8 text-brand-gold mx-auto"></i>
+                <p class="text-xs font-bold text-brand-navy">Click to upload or drag & drop files</p>
+                <p class="text-[11px] text-slate-500">Upload official transcripts, previous term report cards, or ID (PDF, DOCX, JPG - max 15MB each)</p>
+              </div>
+            </div>
+            <div id="newAppFilePreview" class="space-y-1"></div>
+          </div>
+
+          <button type="submit" class="w-full btn-navy py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider text-white shadow-md">
+            Submit New Scholarship Application
+          </button>
+        </form>
+      </div>
+
+      <!-- PANE 2: CONTINUING SCHOLAR SEMESTER ACADEMIC REPORT UPLOAD -->
+      <div id="paneContinuing" class="hidden bg-brand-cream/50 rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm">
+        <div class="border-b border-slate-200 pb-5 mb-6">
+          <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-amber-100 text-amber-900 text-[11px] font-bold mb-2">
+            <i data-lucide="alert-circle" class="w-3.5 h-3.5"></i>
+            Mandatory Every Semester
+          </div>
+          <h3 class="text-xl font-bold text-brand-navy font-heading">Continuing Scholar Semester Academic Report</h3>
+          <p class="text-xs text-slate-600 mt-1">
+            Every semester, all active AfriWell Bridge scholars must submit their latest academic report and grades to maintain ongoing scholarship sponsorship and tuition disbursement.
+          </p>
+        </div>
+
+        <form id="formContinuing" class="space-y-5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Scholar Registration ID Number *</label>
+              <input type="text" required placeholder="e.g. AWB-SCH-2026-042" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-brand-gold">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Scholar Full Name *</label>
+              <input type="text" required placeholder="Full name of registered student" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Academic Year / Semester *</label>
+              <select required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
+                <option>2026 - Semester 1 (Spring)</option>
+                <option>2026 - Semester 2 (Fall)</option>
+                <option>2026 - Annual Session</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Current GPA / Grade Average *</label>
+              <input type="text" required placeholder="e.g. 3.45 GPA / 85% Average" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Academic Standing *</label>
+              <select required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
+                <option>Good Standing (Passing all subjects)</option>
+                <option>Requires Subject Mentoring / Tutoring</option>
+                <option>Promoted to Next Grade</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">Brief Semester Progress Note</label>
+            <textarea rows="2" placeholder="Mention key academic achievements, challenges encountered, or specific subject areas where you made progress." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold"></textarea>
+          </div>
+
+          <!-- Semester Report Document Upload Box -->
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1">
+              Upload Official Semester Report Card / Stamped Transcript *
+            </label>
+            <div class="dropzone p-6 rounded-2xl bg-white text-center cursor-pointer relative border-amber-300">
+              <input type="file" id="reportFiles" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
+              <div class="space-y-1">
+                <i data-lucide="file-badge" class="w-8 h-8 text-amber-600 mx-auto"></i>
+                <p class="text-xs font-bold text-brand-navy">Click to upload official semester report</p>
+                <p class="text-[11px] text-slate-500">Official stamped report cards, transcript slips, or grade letters (PDF, DOCX, JPG)</p>
+              </div>
+            </div>
+            <div id="reportFilePreview" class="space-y-1"></div>
+          </div>
+
+          <button type="submit" class="w-full btn-gold py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider text-white shadow-md">
+            Submit Semester Academic Report
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LEADERSHIP & ORGANIZATIONAL STRUCTURE (ORGANOGRAM) -->
+  <section id="leadership" class="py-20 bg-slate-50 border-t border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-2">
+        <span class="text-brand-gold font-bold text-xs uppercase tracking-widest">Leadership & Governance</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy font-heading">
+          Organizational Leadership & Organogram
+        </h2>
+        <p class="text-slate-600 text-sm">
+          AfriWell Bridge operates under disciplined governance, clear departmental directorships, and qualified professional volunteers.
+        </p>
+      </div>
+
+      <!-- EXECUTIVE DIRECTOR SPOTLIGHT (Cyrus N Younquoi) -->
+      <div class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-md mb-12">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          
+          <div class="md:col-span-4 text-center md:text-left">
+            <div class="relative inline-block rounded-2xl overflow-hidden shadow-lg border-2 border-brand-gold/40 max-w-[240px]">
+              <img src="assets/img/cyrus-younquoi.jpg" alt="Cyrus N Younquoi, Executive Director" class="w-full h-auto object-cover">
+            </div>
+          </div>
+
+          <div class="md:col-span-8 space-y-3 text-center md:text-left">
+            <div class="inline-block px-3 py-1 rounded-full bg-brand-navy/10 text-brand-navy font-bold text-xs uppercase tracking-wider">
+              Executive Leadership
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-brand-navy font-heading">
+              Cyrus N Younquoi
+            </h3>
+            <p class="text-brand-gold font-bold text-sm">Founder & Executive Director</p>
+            <p class="text-slate-600 text-sm leading-relaxed pt-1">
+              Guiding AfriWell Bridge’s overarching humanitarian vision, institutional governance, and field execution. With deep background in healthcare administration and community service, Cyrus spearheads both the annual rural medical missions and the educational scholarship funds across West Africa.
+            </p>
+            <div class="pt-2 flex items-center justify-center md:justify-start gap-4 text-xs font-semibold text-slate-500">
+              <span class="flex items-center gap-1.5"><i data-lucide="award" class="w-4 h-4 text-brand-gold"></i> Executive Leadership</span>
+              <span>•</span>
+              <span class="flex items-center gap-1.5"><i data-lucide="shield" class="w-4 h-4 text-brand-gold"></i> Hospital Administration</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- GOVERNANCE & 4 FUNCTIONAL DIRECTORATES (From Organogram) -->
+      <div class="space-y-6">
+        
+        <!-- Board of Directors Banner -->
+        <div class="p-6 rounded-2xl bg-brand-navy text-white text-center space-y-1 shadow-sm">
+          <span class="text-xs uppercase font-bold tracking-widest text-brand-gold-light">Highest Governance Level</span>
+          <h4 class="text-xl font-bold font-heading">Board of Directors</h4>
+          <p class="text-xs text-slate-300">Provides strategic oversight, fiscal accountability, donor transparency, and governance.</p>
+        </div>
+
+        <!-- 4 Directorate Management Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Directorate 1: Health & Medical -->
+          <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-4 hover-lift">
+            <div class="w-10 h-10 rounded-xl bg-brand-navy/5 text-brand-navy flex items-center justify-center">
+              <i data-lucide="activity" class="w-5 h-5 text-brand-gold"></i>
+            </div>
+            <div>
+              <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Directorate</span>
+              <h4 class="font-bold text-brand-navy text-base font-heading">Health & Medical Programs</h4>
+            </div>
+            <ul class="text-xs text-slate-600 space-y-2 border-t border-slate-100 pt-3">
+              <li class="font-semibold text-slate-800">Director of Health Programs</li>
+              <li>• Medical Outreach Coordinator</li>
+              <li>• Volunteer Doctors & Nurses</li>
+              <li>• Pharmacists & Lab Technicians</li>
+            </ul>
+          </div>
+
+          <!-- Directorate 2: Education & Scholarships -->
+          <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-4 hover-lift">
+            <div class="w-10 h-10 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center">
+              <i data-lucide="book-open" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Directorate</span>
+              <h4 class="font-bold text-brand-navy text-base font-heading">Education & Scholarships</h4>
+            </div>
+            <ul class="text-xs text-slate-600 space-y-2 border-t border-slate-100 pt-3">
+              <li class="font-semibold text-slate-800">Director of Education & Scholarships</li>
+              <li>• Scholarship Coordinator</li>
+              <li>• Scholarship Coordinator Chair</li>
+              <li>• School Support & Mentors</li>
+            </ul>
+          </div>
+
+          <!-- Directorate 3: Finance & Admin -->
+          <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-4 hover-lift">
+            <div class="w-10 h-10 rounded-xl bg-brand-navy/5 text-brand-navy flex items-center justify-center">
+              <i data-lucide="landmark" class="w-5 h-5 text-brand-gold"></i>
+            </div>
+            <div>
+              <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Directorate</span>
+              <h4 class="font-bold text-brand-navy text-base font-heading">Finance & Administration</h4>
+            </div>
+            <ul class="text-xs text-slate-600 space-y-2 border-t border-slate-100 pt-3">
+              <li class="font-semibold text-slate-800">Director of Finance & Admin</li>
+              <li>• Accounting & Budgeting</li>
+              <li>• Compliance & Internal Auditor</li>
+              <li>• Operational Logistics</li>
+            </ul>
+          </div>
+
+          <!-- Directorate 4: Partnerships & Comms -->
+          <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-4 hover-lift">
+            <div class="w-10 h-10 rounded-xl bg-brand-navy/5 text-brand-navy flex items-center justify-center">
+              <i data-lucide="share-2" class="w-5 h-5 text-brand-gold"></i>
+            </div>
+            <div>
+              <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Directorate</span>
+              <h4 class="font-bold text-brand-navy text-base font-heading">Partnerships & Comms</h4>
+            </div>
+            <ul class="text-xs text-slate-600 space-y-2 border-t border-slate-100 pt-3">
+              <li class="font-semibold text-slate-800">Director of Partnerships & Comms</li>
+              <li>• Media & Outreach Coordinator</li>
+              <li>• Donor & Grants Management</li>
+              <li>• Church & NGO Liaisons</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Download Organogram PDF -->
+        <div class="text-center pt-4">
+          <a href="assets/AFRIWELL_ORGANOGRAM.pdf" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-brand-navy hover:text-brand-gold transition border border-slate-300 bg-white px-5 py-2.5 rounded-full shadow-sm">
+            <i data-lucide="file-text" class="w-4 h-4 text-brand-gold"></i>
+            <span>View Official Organogram Chart (PDF)</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GIVING & IMPACT TIERS (MATCHED EXACTLY TO CLIENT'S SCREENSHOT) -->
+  <section id="impact" class="py-20 bg-brand-navy text-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+        <span class="text-brand-gold-light font-bold text-xs uppercase tracking-widest">Every Dollar Directly Serves</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading">
+          Make a Direct Grassroots Impact
+        </h2>
+        <p class="text-slate-300 text-sm">
+          Your compassionate gift directly delivers school uniforms, supplies, and life-saving clinical treatments to children and families in need.
+        </p>
+      </div>
+
+      <!-- 3 Primary Screenshot Tiers + Extended Medical Tiers -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        
+        <!-- Tier 1: $25 (Exact text from client image) -->
+        <div class="tier-card p-8 rounded-3xl bg-white text-slate-800 border-2 border-slate-200 cursor-pointer hover-lift space-y-4" data-amount="25">
+          <div class="text-4xl font-extrabold text-brand-navy font-heading">$25</div>
+          <h3 class="text-lg font-bold text-brand-gold font-heading">School Supplies Support</h3>
+          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+            Helps provide basic school supplies such as notebooks, pens, pencils, and other learning materials for a child in need.
+          </p>
+          <div class="pt-2 text-xs font-bold text-brand-navy flex items-center gap-1">
+            <span>Select $25 Gift</span> &rarr;
+          </div>
+        </div>
+
+        <!-- Tier 2: $50 (Exact text from client image) -->
+        <div class="tier-card p-8 rounded-3xl bg-white text-slate-800 border-2 border-brand-gold ring-2 ring-brand-gold bg-brand-gold/5 cursor-pointer hover-lift space-y-4" data-amount="50">
+          <div class="text-4xl font-extrabold text-brand-navy font-heading">$50</div>
+          <h3 class="text-lg font-bold text-brand-gold font-heading">Uniforms and Shoes</h3>
+          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+            Helps support school uniforms, shoes, and other essential items that allow a child to attend school with dignity.
+          </p>
+          <div class="pt-2 text-xs font-bold text-brand-navy flex items-center gap-1">
+            <span>Select $50 Gift</span> &rarr;
+          </div>
+        </div>
+
+        <!-- Tier 3: $100 (Exact text from client image) -->
+        <div class="tier-card p-8 rounded-3xl bg-white text-slate-800 border-2 border-slate-200 cursor-pointer hover-lift space-y-4" data-amount="100">
+          <div class="text-4xl font-extrabold text-brand-navy font-heading">$100</div>
+          <h3 class="text-lg font-bold text-brand-gold font-heading">School Fees Assistance</h3>
+          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+            Helps reduce the burden of school fees and keeps a student on the path of education and hope.
+          </p>
+          <div class="pt-2 text-xs font-bold text-brand-navy flex items-center gap-1">
+            <span>Select $100 Gift</span> &rarr;
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Live Selection Summary Card -->
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 max-w-3xl mx-auto text-left flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div>
+          <div class="flex items-center gap-3">
+            <span class="text-xs uppercase font-bold tracking-wider text-brand-gold-light">Selected Impact:</span>
+            <span id="selectedAmountDisplay" class="text-2xl font-extrabold font-heading text-white">$50</span>
+          </div>
+          <h4 id="selectedTierTitle" class="text-base font-bold text-white mt-1">Uniforms and Shoes</h4>
+          <p id="selectedTierDesc" class="text-xs text-slate-300 mt-1 max-w-xl">
+            Helps support school uniforms, shoes, and other essential items that allow a child to attend school with dignity.
+          </p>
+        </div>
+
+        <div class="w-full sm:w-auto flex flex-col gap-2">
+          <div class="relative">
+            <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-xs text-slate-400 font-bold">$</span>
+            <input type="number" id="customDonationInput" placeholder="Other amount" class="w-full sm:w-36 pl-6 pr-3 py-2 rounded-xl bg-white/20 border border-white/30 text-white placeholder-slate-400 text-xs font-bold focus:outline-none focus:ring-1 focus:ring-brand-gold">
+          </div>
+          <a href="#contact" class="btn-gold px-6 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider text-white text-center shadow">
+            Donate Now
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AUTHENTIC FIELD STORIES & GALLERY -->
+  <section id="stories" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
         <div>
-          <span class="text-brand-gold font-bold text-xs uppercase tracking-widest">Field Perspectives</span>
+          <span class="text-brand-gold font-bold text-xs uppercase tracking-widest">Ground Realities</span>
           <h2 class="text-3xl font-extrabold text-brand-navy font-heading mt-1">
-            Real Lives, Real Hope
+            Real Lives, Real Resilience
           </h2>
         </div>
         <p class="text-slate-500 text-sm max-w-sm">
@@ -347,9 +846,9 @@
           <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-slate-100 border border-slate-200">
             <img src="assets/img/outreach-consultation.jpg" alt="Medical consultation in rural Africa" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
           </div>
-          <h3 class="font-bold text-brand-navy text-base font-heading">Healthcare at the Doorstep</h3>
+          <h3 class="font-bold text-brand-navy text-base font-heading">Listening at the Doorstep</h3>
           <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-            Healthcare workers taking clinical time to listen, diagnose, and provide free medicines to rural families.
+            Healthcare professionals taking time under the sun to listen, diagnose, and provide prescription medicines to rural families.
           </p>
         </div>
 
@@ -358,9 +857,9 @@
           <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-slate-100 border border-slate-200">
             <img src="assets/img/community-family.jpg" alt="Protected African family" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
           </div>
-          <h3 class="font-bold text-brand-navy text-base font-heading">Dignity for Families</h3>
+          <h3 class="font-bold text-brand-navy text-base font-heading">Family Dignity</h3>
           <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-            Multi-generational families receiving the health education and support needed to thrive together.
+            Protecting multi-generational households through preventive healthcare counseling and compassionate service.
           </p>
         </div>
 
@@ -369,9 +868,9 @@
           <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-slate-100 border border-slate-200">
             <img src="assets/img/village-children.jpg" alt="Children in African village" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
           </div>
-          <h3 class="font-bold text-brand-navy text-base font-heading">Brightening Young Futures</h3>
+          <h3 class="font-bold text-brand-navy text-base font-heading">Future Without Limits</h3>
           <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-            Ensuring the youngest boys and girls in remote villages have the school supplies and fees to stay in class.
+            Ensuring young boys and girls in rural villages receive school supplies, uniforms, and mentorship to stay enrolled.
           </p>
         </div>
 
@@ -380,114 +879,68 @@
     </div>
   </section>
 
-  <!-- SMART GIVING / IMPACT SECTION -->
-  <section id="give" class="py-20 bg-brand-navy text-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+  <!-- CONTACT & ENGAGEMENT -->
+  <section id="contact" class="py-20 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="space-y-3 max-w-xl mx-auto">
-        <span class="text-brand-gold-light font-bold text-xs uppercase tracking-widest">Support The Mission</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-heading">
-          Make a Direct Grassroots Impact
-        </h2>
-        <p class="text-slate-300 text-sm">
-          Every contribution goes directly to patient screenings, prescription medicines, and student school supplies.
-        </p>
-      </div>
-
-      <!-- Clean Giving Card -->
-      <div class="bg-white rounded-3xl p-6 sm:p-10 text-slate-800 text-left shadow-2xl border border-white/20">
-        
-        <!-- Amount Selector -->
-        <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Choose a Gift Amount</label>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-          <button class="amt-btn py-3 px-4 rounded-xl font-bold text-base border transition bg-white text-brand-navy border-slate-200 hover:border-brand-gold" data-amt="25">
-            $25
-          </button>
-          <button class="amt-btn py-3 px-4 rounded-xl font-bold text-base border transition bg-brand-navy text-white border-brand-navy" data-amt="50">
-            $50
-          </button>
-          <button class="amt-btn py-3 px-4 rounded-xl font-bold text-base border transition bg-white text-brand-navy border-slate-200 hover:border-brand-gold" data-amt="100">
-            $100
-          </button>
-          <button class="amt-btn py-3 px-4 rounded-xl font-bold text-base border transition bg-white text-brand-navy border-slate-200 hover:border-brand-gold" data-amt="250">
-            $250
-          </button>
-        </div>
-
-        <!-- Impact Description -->
-        <div class="p-4 rounded-xl bg-brand-cream border border-slate-200/80 mb-6">
-          <p id="amtDesc" class="text-sm text-slate-700 font-medium">
-            <strong>$50 Gift:</strong> Funds medical consultations, malaria tests, and essential prescription medicines for 2 rural families.
-          </p>
-        </div>
-
-        <!-- Action Button -->
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div class="flex items-center gap-2 text-xs text-slate-500">
-            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
-            <span>Accountable Christian Humanitarian Initiative</span>
-          </div>
-          <a href="#contact" class="w-full sm:w-auto btn-gold px-8 py-3.5 rounded-full font-bold text-xs uppercase tracking-wider text-white text-center">
-            Complete Contribution
-          </a>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- GET INVOLVED / CONTACT: SIMPLE & SMART -->
-  <section id="contact" class="py-20 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="bg-brand-cream rounded-3xl p-8 sm:p-12 border border-slate-200">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-sm">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           
-          <div class="space-y-4">
+          <div class="md:col-span-5 space-y-4">
             <span class="text-brand-gold font-bold text-xs uppercase tracking-widest">Connect With Us</span>
             <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy font-heading">
               Join Hands With AfriWell Bridge
             </h2>
             <p class="text-slate-600 text-sm leading-relaxed">
-              We welcome healthcare professionals, teachers, church partners, diaspora members, and sponsors.
+              We welcome healthcare professionals, teachers, church congregations, diaspora associations, and philanthropic partners.
             </p>
-            <div class="space-y-2 pt-2 text-xs text-slate-600">
+            <div class="space-y-2 text-xs text-slate-600 pt-2">
               <div class="flex items-center gap-2">
                 <i data-lucide="mail" class="w-4 h-4 text-brand-gold"></i>
-                <span class="font-medium">contact@afriwellbridge.org</span>
+                <span class="font-medium text-slate-800">contact@afriwellbridge.org</span>
               </div>
               <div class="flex items-center gap-2">
                 <i data-lucide="map-pin" class="w-4 h-4 text-brand-gold"></i>
-                <span class="font-medium">USA & Rural West Africa</span>
+                <span>United States & Rural West Africa</span>
               </div>
             </div>
           </div>
 
-          <!-- Simple Contact Form -->
-          <form id="simpleContactForm" class="bg-white p-6 rounded-2xl border border-slate-200 space-y-3 shadow-sm">
-            <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">Your Name</label>
-              <input type="text" required placeholder="John Doe" class="w-full px-3 py-2 rounded-lg border border-slate-200 text-xs focus:outline-none focus:ring-1 focus:ring-brand-gold">
-            </div>
-            <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">Email</label>
-              <input type="email" required placeholder="john@example.com" class="w-full px-3 py-2 rounded-lg border border-slate-200 text-xs focus:outline-none focus:ring-1 focus:ring-brand-gold">
-            </div>
-            <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">How would you like to participate?</label>
-              <select class="w-full px-3 py-2 rounded-lg border border-slate-200 text-xs focus:outline-none focus:ring-1 focus:ring-brand-gold">
-                <option>Volunteer as Medical Professional</option>
-                <option>Education / Mentorship Volunteer</option>
-                <option>Church / Ministry Partner</option>
-                <option>Diaspora Supporter</option>
-                <option>Financial Support / Grant</option>
-              </select>
-            </div>
-            <button type="submit" class="w-full btn-navy py-2.5 rounded-lg font-bold text-xs uppercase tracking-wider text-white">
-              Send Inquiry
-            </button>
-          </form>
+          <!-- General Contact Form -->
+          <div class="md:col-span-7">
+            <form id="generalContactForm" class="space-y-3.5 bg-slate-50 p-6 rounded-2xl border border-slate-200">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 mb-1">Your Name *</label>
+                  <input type="text" required placeholder="John Doe" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-1 focus:ring-brand-gold">
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 mb-1">Email Address *</label>
+                  <input type="email" required placeholder="john@example.com" class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-1 focus:ring-brand-gold">
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Area of Interest / Partnership</label>
+                <select class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-1 focus:ring-brand-gold">
+                  <option>Medical Professional Volunteer</option>
+                  <option>Scholarship Sponsorship / Donor</option>
+                  <option>Church / Faith Ministry Partnership</option>
+                  <option>Diaspora Member Engagement</option>
+                  <option>General Support / Inquiry</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Message</label>
+                <textarea rows="2" required placeholder="Tell us how you would like to collaborate..." class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs focus:outline-none focus:ring-1 focus:ring-brand-gold"></textarea>
+              </div>
+
+              <button type="submit" class="w-full btn-navy py-3 rounded-xl font-bold text-xs uppercase tracking-wider text-white shadow">
+                Send Message
+              </button>
+            </form>
+          </div>
 
         </div>
       </div>
@@ -495,73 +948,68 @@
     </div>
   </section>
 
-  <!-- MINIMAL FOOTER -->
-  <footer class="bg-white py-12 border-t border-slate-100 text-slate-500 text-xs">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+  <!-- FOOTER (COLORECTAL CANCER ALLIANCE STYLE) -->
+  <footer class="bg-brand-navy-dark text-slate-400 py-16 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="flex items-center gap-4">
-        <img src="assets/img/logo-light.svg" alt="AfriWell Bridge" class="h-8 w-auto">
-        <span class="text-slate-400">|</span>
-        <span>Galatians 6:10</span>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- Col 1: Logo & Mission -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="inline-block bg-white p-1.5 rounded-xl">
+            <img src="assets/img/logo-3d.jpg" alt="AfriWell Bridge 3D Logo" class="h-12 w-auto object-contain">
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed max-w-sm">
+            Living out the Gospel by furthering Christ healing and teaching ministry to bring wholeness through healthcare and education to all men.
+          </p>
+          <div class="text-xs font-bold text-brand-gold-light">
+            Galatians 6:10 • Christian Humanitarian Organization
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="md:col-span-3 space-y-2.5">
+          <h4 class="text-white text-xs font-bold uppercase tracking-widest font-heading">Navigation</h4>
+          <ul class="space-y-1.5 text-xs">
+            <li><a href="#about" class="hover:text-brand-gold-light transition">About AfriWell Bridge</a></li>
+            <li><a href="#programs" class="hover:text-brand-gold-light transition">Rural Medical Outreach</a></li>
+            <li><a href="#scholarships" class="hover:text-brand-gold-light transition">Apply for Scholarships</a></li>
+            <li><a href="#scholarships" class="hover:text-brand-gold-light transition">Continuing Scholar Reports</a></li>
+            <li><a href="#leadership" class="hover:text-brand-gold-light transition">Executive Team & Organogram</a></li>
+            <li><a href="#impact" class="hover:text-brand-gold-light transition">Giving & Impact Tiers</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Newsletter & Updates -->
+        <div class="md:col-span-4 space-y-3">
+          <h4 class="text-white text-xs font-bold uppercase tracking-widest font-heading">Stay Connected</h4>
+          <p class="text-xs text-slate-400">Receive mission reports, medical outreach schedules, and student impact updates.</p>
+          <div class="flex gap-2">
+            <input type="email" placeholder="Enter your email" class="px-3.5 py-2 rounded-xl bg-slate-800 border border-slate-700 text-white text-xs w-full focus:outline-none focus:ring-1 focus:ring-brand-gold">
+            <button class="btn-gold px-4 py-2 rounded-xl text-xs font-bold text-white whitespace-nowrap">Subscribe</button>
+          </div>
+        </div>
+
       </div>
 
-      <p>&copy; 2026 AfriWell Bridge (AWB). Living out the Gospel through healthcare & education.</p>
+      <!-- Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>&copy; 2026 AfriWell Bridge (AWB). All rights reserved.</p>
+        <p>Colors: Navy Blue (#13284F) & Gold (#B8902F).</p>
+      </div>
 
     </div>
   </footer>
 
-  <!-- SIMPLE SCRIPT -->
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-brand-navy text-white px-5 py-3.5 rounded-2xl shadow-2xl border border-brand-gold text-xs font-semibold transition-all duration-300 opacity-0 pointer-events-none translate-y-4 max-w-sm">
+    Notification text
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
   <script>
-    // Initialize icons
     lucide.createIcons();
-
-    // Mobile menu toggle
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (menuBtn && mobileMenu) {
-      menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-      mobileMenu.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-      });
-    }
-
-    // Smart donation amount switcher
-    const amtButtons = document.querySelectorAll('.amt-btn');
-    const amtDesc = document.getElementById('amtDesc');
-    const descriptions = {
-      '25': '<strong>$25 Gift:</strong> Provides a durable backpack, notebooks, and writing materials for a rural student for an entire school year.',
-      '50': '<strong>$50 Gift:</strong> Funds medical consultations, malaria tests, and essential prescription medicines for 2 rural families.',
-      '100': '<strong>$100 Gift:</strong> Covers a full academic scholarship, tailor-made uniform, and textbooks for a vulnerable child.',
-      '250': '<strong>$250 Gift:</strong> Supplies diagnostic equipment, rapid test kits, and emergency surgical referral transport for mobile clinics.'
-    };
-
-    amtButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        amtButtons.forEach(b => {
-          b.classList.remove('bg-brand-navy', 'text-white', 'border-brand-navy');
-          b.classList.add('bg-white', 'text-brand-navy', 'border-slate-200');
-        });
-        btn.classList.add('bg-brand-navy', 'text-white', 'border-brand-navy');
-        btn.classList.remove('bg-white', 'text-brand-navy', 'border-slate-200');
-
-        const val = btn.dataset.amt;
-        if (descriptions[val] && amtDesc) {
-          amtDesc.innerHTML = descriptions[val];
-        }
-      });
-    });
-
-    // Simple contact alert
-    const contactForm = document.getElementById('simpleContactForm');
-    if (contactForm) {
-      contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Thank you! Your inquiry has been received. Our team will be in touch shortly.');
-        contactForm.reset();
-      });
-    }
   </script>
 </body>
 </html>
