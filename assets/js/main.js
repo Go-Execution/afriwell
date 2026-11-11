@@ -189,4 +189,34 @@ document.addEventListener('DOMContentLoaded', () => {
       generalContactForm.reset();
     });
   }
+
+  // Founder's Full Autobiography Modal
+  const bioModal = document.getElementById('bioModal');
+  const openBioModalBtn = document.getElementById('openBioModalBtn');
+  const closeBioModalBtn = document.getElementById('closeBioModalBtn');
+
+  function openBioModal() {
+    if (!bioModal) return;
+    bioModal.classList.remove('hidden');
+    bioModal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeBioModal() {
+    if (!bioModal) return;
+    bioModal.classList.add('hidden');
+    bioModal.classList.remove('flex');
+    document.body.style.overflow = 'auto';
+  }
+
+  if (openBioModalBtn) openBioModalBtn.addEventListener('click', openBioModal);
+  if (closeBioModalBtn) closeBioModalBtn.addEventListener('click', closeBioModal);
+  if (bioModal) {
+    bioModal.addEventListener('click', (e) => {
+      if (e.target === bioModal) closeBioModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !bioModal.classList.contains('hidden')) closeBioModal();
+    });
+  }
 });
