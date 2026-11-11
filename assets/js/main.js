@@ -219,4 +219,81 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'Escape' && !bioModal.classList.contains('hidden')) closeBioModal();
     });
   }
+
+  // Leadership 3x1 Carousel Logic
+  const track = document.getElementById('leadershipTrack');
+  const prevBtn = document.getElementById('leaderPrevBtn');
+  const nextBtn = document.getElementById('leaderNextBtn');
+  const dotsContainer = document.getElementById('leaderDots');
+
+  if (track && prevBtn && nextBtn) {
+    const cards = Array.from(track.children);
+    let currentIndex = 0;
+
+    function getVisibleCount() {
+      return window.innerWidth >= 768 ? 3 : 1;
+    }
+
+    function getMaxIndex() {
+      return Math.max(0, cards.length - getVisibleCount());
+    }
+
+    function renderDots() {
+      if (!dotsContainer) return;
+      const maxIdx = getMaxIndex();
+      dotsContainer.innerHTML = '';
+      for (let i = 0; i <= maxIdx; i++) {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.setAttribute('aria-label', `Slide ${i + 1}`);
+        dot.className = i === currentIndex
+          ? 'w-7 h-2 rounded-full bg-brand-gold transition-all'
+          : 'w-2 h-2 rounded-full bg-slate-300 hover:bg-slate-400 transition-all';
+        dot.addEventListener('click', () => {
+          currentIndex = i;
+          updateCarousel();
+        });
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    function updateCarousel() {
+      const maxIdx = getMaxIndex();
+      if (currentIndex > maxIdx) currentIndex = maxIdx;
+      if (currentIndex < 0) currentIndex = 0;
+
+      const cardWidth = cards[0].getBoundingClientRect().width;
+      const style = window.getComputedStyle(track);
+      const gap = parseFloat(style.columnGap || style.gap || '24') || 24;
+      const offset = currentIndex * (cardWidth + gap);
+
+      track.style.transform = `translateX(-${offset}px)`;
+
+      prevBtn.disabled = currentIndex === 0;
+      nextBtn.disabled = currentIndex >= maxIdx;
+      prevBtn.classList.toggle('opacity-40', currentIndex === 0);
+      prevBtn.classList.toggle('cursor-not-allowed', currentIndex === 0);
+      nextBtn.classList.toggle('opacity-40', currentIndex >= maxIdx);
+      nextBtn.classList.toggle('cursor-not-allowed', currentIndex >= maxIdx);
+
+      renderDots();
+    }
+
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+      }
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < getMaxIndex()) {
+        currentIndex++;
+        updateCarousel();
+      }
+    });
+
+    window.addEventListener('resize', updateCarousel);
+    updateCarousel();
+  }
 });
