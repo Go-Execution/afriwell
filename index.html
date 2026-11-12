@@ -76,35 +76,40 @@
 
   <!-- MAIN HEADER NAVIGATION -->
   <header id="mainHeader" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-24 sm:h-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 xl:px-8">
+      <div class="flex items-center justify-between h-20 sm:h-22 lg:h-24">
         
-        <!-- 3D Brand Logo (2x Prominent & Cleanly Cropped) -->
-        <a href="#" class="flex items-center group py-2">
-          <img src="assets/img/logo-3d.jpg" alt="AfriWell Bridge 3D Logo" class="h-16 sm:h-20 lg:h-24 w-auto object-contain transition-transform group-hover:scale-[1.02]">
+        <!-- 3D Brand Logo (Responsive & Cleanly Proportionate) -->
+        <a href="#" class="flex items-center group py-2 flex-shrink-0">
+          <img src="assets/img/logo-3d.jpg" alt="AfriWell Bridge 3D Logo" class="h-12 sm:h-14 lg:h-14 xl:h-18 w-auto object-contain transition-transform group-hover:scale-[1.02]">
         </a>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-700">
-          <a href="#about" class="hover:text-brand-navy transition">About Us</a>
-          <a href="#programs" class="hover:text-brand-navy transition">Programs</a>
-          <a href="#scholarships" class="text-brand-navy font-bold flex items-center gap-1 hover:text-brand-gold transition">
+        <nav class="hidden lg:flex items-center gap-3 xl:gap-5 2xl:gap-6 text-xs xl:text-sm font-semibold text-slate-700 whitespace-nowrap">
+          <a href="#about" class="hover:text-brand-navy transition whitespace-nowrap">About Us</a>
+          <a href="#programs" class="hover:text-brand-navy transition whitespace-nowrap">Programs</a>
+          <a href="#scholarships" class="text-brand-navy font-bold flex items-center gap-1 hover:text-brand-gold transition whitespace-nowrap">
             <span>Scholarships</span>
-            <span class="px-1.5 py-0.5 rounded text-[10px] bg-brand-gold/15 text-brand-gold font-bold">Apply & Reports</span>
+            <span class="hidden xl:inline-block px-1.5 py-0.5 rounded text-[10px] bg-brand-gold/15 text-brand-gold font-bold whitespace-nowrap">Apply & Reports</span>
           </a>
-          <a href="#scholars" class="hover:text-brand-navy transition text-brand-navy">Our Scholars</a>
-          <a href="#leadership" class="hover:text-brand-navy transition">Leadership & Team</a>
-          <a href="#impact" class="hover:text-brand-navy transition">Giving & Impact</a>
-          <a href="#stories" class="hover:text-brand-navy transition">Stories</a>
-          <a href="#contact" class="hover:text-brand-navy transition">Contact</a>
+          <a href="#leadership" class="hover:text-brand-navy transition whitespace-nowrap">
+            <span class="xl:hidden">Leadership</span>
+            <span class="hidden xl:inline">Leadership & Team</span>
+          </a>
+          <a href="#impact" class="hover:text-brand-navy transition whitespace-nowrap">
+            <span class="xl:hidden">Giving</span>
+            <span class="hidden xl:inline">Giving & Impact</span>
+          </a>
+          <a href="#stories" class="hover:text-brand-navy transition whitespace-nowrap">Stories</a>
+          <a href="#contact" class="hover:text-brand-navy transition whitespace-nowrap">Contact</a>
         </nav>
 
         <!-- Header CTA Buttons -->
-        <div class="hidden sm:flex items-center gap-3">
-          <a href="#scholarships" class="px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-brand-navy border border-brand-navy/30 hover:bg-slate-50 transition">
+        <div class="hidden sm:flex items-center gap-2 xl:gap-3 flex-shrink-0 whitespace-nowrap">
+          <a href="#scholarships" class="whitespace-nowrap px-3.5 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-brand-navy border border-brand-navy/30 hover:bg-slate-50 transition">
             Apply / Upload
           </a>
-          <a href="#impact" class="btn-gold px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-white flex items-center gap-1.5">
+          <a href="#impact" class="whitespace-nowrap btn-gold px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-white flex items-center gap-1.5 flex-shrink-0 shadow-sm">
             <i data-lucide="heart" class="w-3.5 h-3.5 fill-white"></i>
             <span>Donate</span>
           </a>
