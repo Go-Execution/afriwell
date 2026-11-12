@@ -220,6 +220,89 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Active Scholar Profile Modal
+  const scholarModal = document.getElementById('scholarModal');
+  const closeScholarModalBtn = document.getElementById('closeScholarModalBtn');
+  const modalScholarImg = document.getElementById('modalScholarImg');
+  const modalScholarName = document.getElementById('modalScholarName');
+  const modalScholarInstitution = document.getElementById('modalScholarInstitution');
+  const modalScholarCourse = document.getElementById('modalScholarCourse');
+  const modalScholarLocation = document.getElementById('modalScholarLocation');
+  const modalScholarBio = document.getElementById('modalScholarBio');
+  const modalSupportBtn = document.getElementById('modalSupportBtn');
+
+  const scholarsData = {
+    precious: {
+      name: 'Precious S Banyeah',
+      institution: 'University of Liberia',
+      course: 'Course of Study: Bio Medical',
+      location: 'Monrovia, Liberia',
+      img: 'assets/img/scholar-precious-banyeah.jpg',
+      bio: 'Precious S Banyeah is currently pursuing Bio Medical sciences at the University of Liberia in Monrovia. Through the AfriWell Bridge higher education sponsorship, Precious receives continuous tuition coverage, medical science textbooks, and academic mentorship. She aspires to build clinical laboratory expertise to address the critical shortage of diagnostic pathology services in rural and suburban health centers across Liberia.'
+    },
+    keline: {
+      name: 'Keline Dawoeye',
+      institution: 'LICC University',
+      course: 'Course of Study: Agricultural',
+      location: 'Ganta City, Nimba County, Liberia',
+      img: 'assets/img/scholar-keline-dawoeye.jpg',
+      bio: 'Keline Dawoeye is studying Agricultural Sciences at Liberian International Christian College (LICC University) in Ganta City, Nimba County. Supported by AfriWell Bridge, Keline is committed to modern agronomy, sustainable crop production, and rural farming innovation. Her long-term goal is to assist smallholder farmer cooperatives and boost community food security throughout Nimba County.'
+    },
+    tarleseh: {
+      name: 'Tarleseh Banyeah',
+      institution: 'Apex University',
+      course: 'Course of Study: Criminal Justice',
+      location: 'Monrovia, Liberia',
+      img: 'assets/img/scholar-tarleseh-banyeah.jpg',
+      bio: 'Tarleseh Banyeah is enrolled in the Criminal Justice degree program at Apex University in Monrovia. Under AfriWell Bridge\'s scholarship sponsorship, Tarleseh is preparing for a career in judicial administration, institutional integrity, and human rights advocacy, aiming to defend vulnerable families and expand access to justice in Liberia.'
+    }
+  };
+
+  function openScholarModal(key) {
+    const data = scholarsData[key];
+    if (!data || !scholarModal) return;
+    if (modalScholarImg) modalScholarImg.src = data.img;
+    if (modalScholarName) modalScholarName.textContent = data.name;
+    if (modalScholarInstitution) modalScholarInstitution.textContent = data.institution;
+    if (modalScholarCourse) modalScholarCourse.textContent = data.course;
+    if (modalScholarLocation) modalScholarLocation.textContent = data.location;
+    if (modalScholarBio) modalScholarBio.textContent = data.bio;
+
+    scholarModal.classList.remove('hidden');
+    scholarModal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeScholarModal() {
+    if (!scholarModal) return;
+    scholarModal.classList.add('hidden');
+    scholarModal.classList.remove('flex');
+    document.body.style.overflow = 'auto';
+  }
+
+  document.querySelectorAll('.open-scholar-modal').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const key = btn.dataset.scholar;
+      openScholarModal(key);
+    });
+  });
+
+  if (closeScholarModalBtn) closeScholarModalBtn.addEventListener('click', closeScholarModal);
+  if (scholarModal) {
+    scholarModal.addEventListener('click', (e) => {
+      if (e.target === scholarModal) closeScholarModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !scholarModal.classList.contains('hidden')) closeScholarModal();
+    });
+  }
+  if (modalSupportBtn) {
+    modalSupportBtn.addEventListener('click', () => {
+      closeScholarModal();
+    });
+  }
+
   // Leadership 3x1 Carousel Logic
   const track = document.getElementById('leadershipTrack');
   const prevBtn = document.getElementById('leaderPrevBtn');

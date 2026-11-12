@@ -85,13 +85,14 @@
         </a>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700">
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-700">
           <a href="#about" class="hover:text-brand-navy transition">About Us</a>
           <a href="#programs" class="hover:text-brand-navy transition">Programs</a>
           <a href="#scholarships" class="text-brand-navy font-bold flex items-center gap-1 hover:text-brand-gold transition">
             <span>Scholarships</span>
             <span class="px-1.5 py-0.5 rounded text-[10px] bg-brand-gold/15 text-brand-gold font-bold">Apply & Reports</span>
           </a>
+          <a href="#scholars" class="hover:text-brand-navy transition text-brand-navy">Our Scholars</a>
           <a href="#leadership" class="hover:text-brand-navy transition">Leadership & Team</a>
           <a href="#impact" class="hover:text-brand-navy transition">Giving & Impact</a>
           <a href="#stories" class="hover:text-brand-navy transition">Stories</a>
@@ -122,6 +123,7 @@
       <a href="#about" class="block py-1 hover:text-brand-navy">About Us</a>
       <a href="#programs" class="block py-1 hover:text-brand-navy">Flagship Programs</a>
       <a href="#scholarships" class="block py-1 text-brand-navy font-bold">Scholarship Portal (Apply & Upload Reports)</a>
+      <a href="#scholars" class="block py-1 text-brand-navy hover:text-brand-gold">Our University Scholars (Active Beneficiaries)</a>
       <a href="#leadership" class="block py-1 hover:text-brand-navy">Leadership & Organogram</a>
       <a href="#impact" class="block py-1 hover:text-brand-navy">Giving & Impact</a>
       <a href="#stories" class="block py-1 hover:text-brand-navy">Field Stories</a>
@@ -431,9 +433,9 @@
           </div>
 
           <div class="px-8 pb-8 pt-4 border-t border-slate-100 flex items-center justify-between">
-            <span class="text-xs text-slate-500">Merit & Need-based support</span>
-            <a href="#scholarships" class="text-xs font-bold text-brand-navy hover:text-brand-gold transition flex items-center gap-1">
-              <span>Go to Scholarship Portal</span> &rarr;
+            <span class="text-xs text-slate-500 font-medium">3 Active University Scholars in Liberia</span>
+            <a href="#scholars" class="text-xs font-bold text-brand-navy hover:text-brand-gold transition flex items-center gap-1">
+              <span>Meet Our Scholars</span> &rarr;
             </a>
           </div>
         </div>
@@ -445,180 +447,442 @@
 
   <!-- DEDICATED SCHOLARSHIP & ACADEMIC REPORT PORTAL (CLIENT MANDATORY REQUIREMENT) -->
   <section id="scholarships" class="py-20 bg-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-2xl mx-auto mb-8 space-y-2">
-        <span class="text-brand-gold font-bold text-xs uppercase tracking-widest">Official Academic Hub</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy font-heading">
-          Scholarship & Academic Reports Portal
-        </h2>
-        <p class="text-slate-600 text-sm">
-          Please select your pathway below: apply for a new scholarship, or submit your required semester academic report as an active AfriWell Bridge scholar.
-        </p>
-      </div>
+      <!-- FORM & PORTAL CONTAINER -->
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-8 space-y-2">
+          <span class="text-brand-gold font-bold text-xs uppercase tracking-widest">Official Academic Hub</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy font-heading">
+            Scholarship & Academic Reports Portal
+          </h2>
+          <p class="text-slate-600 text-sm">
+            Please select your pathway below: apply for a new scholarship, or submit your required semester academic report as an active AfriWell Bridge scholar.
+          </p>
+        </div>
 
-      <!-- Classroom Banner inside Scholarship Hub -->
-      <div class="mb-8 rounded-3xl overflow-hidden border border-slate-200 shadow-sm relative h-48 sm:h-60 bg-slate-100">
-        <img src="assets/img/rural-classroom-2.jpg" alt="Rural students studying in classroom" class="w-full h-full object-cover object-center">
-        <div class="absolute inset-0 bg-gradient-to-r from-brand-navy-dark/85 via-brand-navy-dark/50 to-transparent flex items-center p-6 sm:p-10">
-          <div class="max-w-md text-white space-y-1.5">
-            <span class="inline-block px-2.5 py-0.5 rounded bg-brand-gold text-white text-[10px] font-bold uppercase tracking-wider">Empowering Scholars</span>
-            <h3 class="text-lg sm:text-xl font-bold font-heading">Investing in Accountability & Academic Excellence</h3>
-            <p class="text-xs text-slate-200 leading-relaxed">
-              Every child deserves the textbooks, uniforms, and mentorship to thrive—regardless of economic hardship.
+        <!-- Classroom Banner inside Scholarship Hub -->
+        <div class="mb-8 rounded-3xl overflow-hidden border border-slate-200 shadow-sm relative h-48 sm:h-60 bg-slate-100">
+          <img src="assets/img/rural-classroom-2.jpg" alt="Rural students studying in classroom" class="w-full h-full object-cover object-center">
+          <div class="absolute inset-0 bg-gradient-to-r from-brand-navy-dark/85 via-brand-navy-dark/50 to-transparent flex items-center p-6 sm:p-10">
+            <div class="max-w-md text-white space-y-1.5">
+              <span class="inline-block px-2.5 py-0.5 rounded bg-brand-gold text-white text-[10px] font-bold uppercase tracking-wider">Empowering Scholars</span>
+              <h3 class="text-lg sm:text-xl font-bold font-heading">Investing in Accountability & Academic Excellence</h3>
+              <p class="text-xs text-slate-200 leading-relaxed">
+                Every child deserves the textbooks, uniforms, and mentorship to thrive—regardless of economic hardship.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab Buttons -->
+        <div class="flex justify-center mb-8">
+          <div class="inline-flex p-1.5 rounded-2xl bg-slate-100 border border-slate-200 max-w-md w-full">
+            <button id="tabNewApp" class="flex-1 py-3 px-4 rounded-xl font-bold text-xs uppercase tracking-wider transition-all bg-brand-navy text-white shadow">
+              1. Apply for Scholarship
+            </button>
+            <button id="tabContinuing" class="flex-1 py-3 px-4 rounded-xl font-bold text-xs uppercase tracking-wider transition-all bg-white text-slate-600 hover:bg-slate-50">
+              2. Current Scholar Report
+            </button>
+          </div>
+        </div>
+
+        <!-- PANE 1: NEW SCHOLARSHIP APPLICATION FORM -->
+        <div id="paneNewApp" class="bg-brand-cream/50 rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm">
+          <div class="border-b border-slate-200 pb-5 mb-6">
+            <h3 class="text-xl font-bold text-brand-navy font-heading">New Student Scholarship Application</h3>
+            <p class="text-xs text-slate-600 mt-1">
+              For students in primary, secondary, or vocational institutions in need of financial sponsorship and educational support.
             </p>
           </div>
-        </div>
-      </div>
 
-      <!-- Tab Buttons -->
-      <div class="flex justify-center mb-8">
-        <div class="inline-flex p-1.5 rounded-2xl bg-slate-100 border border-slate-200 max-w-md w-full">
-          <button id="tabNewApp" class="flex-1 py-3 px-4 rounded-xl font-bold text-xs uppercase tracking-wider transition-all bg-brand-navy text-white shadow">
-            1. Apply for Scholarship
-          </button>
-          <button id="tabContinuing" class="flex-1 py-3 px-4 rounded-xl font-bold text-xs uppercase tracking-wider transition-all bg-white text-slate-600 hover:bg-slate-50">
-            2. Current Scholar Report
-          </button>
-        </div>
-      </div>
-
-      <!-- PANE 1: NEW SCHOLARSHIP APPLICATION FORM -->
-      <div id="paneNewApp" class="bg-brand-cream/50 rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm">
-        <div class="border-b border-slate-200 pb-5 mb-6">
-          <h3 class="text-xl font-bold text-brand-navy font-heading">New Student Scholarship Application</h3>
-          <p class="text-xs text-slate-600 mt-1">
-            For students in primary, secondary, or vocational institutions in need of financial sponsorship and educational support.
-          </p>
-        </div>
-
-        <form id="formNewApp" class="space-y-5">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">Student Full Name *</label>
-              <input type="text" required placeholder="Full legal name" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
-            </div>
-            <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">Email / WhatsApp Contact *</label>
-              <input type="text" required placeholder="Email or active phone number" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">Country / County *</label>
-              <input type="text" required placeholder="e.g. West Africa / County" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
-            </div>
-            <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">School / Institution Name *</label>
-              <input type="text" required placeholder="Name of school" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
-            </div>
-            <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">Current Grade / Class Level *</label>
-              <input type="text" required placeholder="e.g. Grade 9, SS2, Form 3" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
-            </div>
-          </div>
-
-          <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Brief Statement of Financial Need *</label>
-            <textarea rows="3" required placeholder="Please describe family background, financial challenges, and how this scholarship will assist you." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold"></textarea>
-          </div>
-
-          <!-- Document Upload Box (Transcripts, Certificates) -->
-          <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">
-              Upload Official Academic Transcripts / Report Cards *
-            </label>
-            <div class="dropzone p-6 rounded-2xl bg-white text-center cursor-pointer relative">
-              <input type="file" id="newAppFiles" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
-              <div class="space-y-1">
-                <i data-lucide="upload-cloud" class="w-8 h-8 text-brand-gold mx-auto"></i>
-                <p class="text-xs font-bold text-brand-navy">Click to upload or drag & drop files</p>
-                <p class="text-[11px] text-slate-500">Upload official transcripts, previous term report cards, or ID (PDF, DOCX, JPG - max 15MB each)</p>
+          <form id="formNewApp" class="space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Student Full Name *</label>
+                <input type="text" required placeholder="Full legal name" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Email / WhatsApp Contact *</label>
+                <input type="text" required placeholder="Email or active phone number" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
               </div>
             </div>
-            <div id="newAppFilePreview" class="space-y-1"></div>
-          </div>
 
-          <button type="submit" class="w-full btn-navy py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider text-white shadow-md">
-            Submit New Scholarship Application
-          </button>
-        </form>
-      </div>
-
-      <!-- PANE 2: CONTINUING SCHOLAR SEMESTER ACADEMIC REPORT UPLOAD -->
-      <div id="paneContinuing" class="hidden bg-brand-cream/50 rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm">
-        <div class="border-b border-slate-200 pb-5 mb-6">
-          <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-amber-100 text-amber-900 text-[11px] font-bold mb-2">
-            <i data-lucide="alert-circle" class="w-3.5 h-3.5"></i>
-            Mandatory Every Semester
-          </div>
-          <h3 class="text-xl font-bold text-brand-navy font-heading">Continuing Scholar Semester Academic Report</h3>
-          <p class="text-xs text-slate-600 mt-1">
-            Every semester, all active AfriWell Bridge scholars must submit their latest academic report and grades to maintain ongoing scholarship sponsorship and tuition disbursement.
-          </p>
-        </div>
-
-        <form id="formContinuing" class="space-y-5">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">Scholar Registration ID Number *</label>
-              <input type="text" required placeholder="e.g. AWB-SCH-2026-042" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-brand-gold">
-            </div>
-            <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">Scholar Full Name *</label>
-              <input type="text" required placeholder="Full name of registered student" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">Academic Year / Semester *</label>
-              <select required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
-                <option>2026 - Semester 1 (Spring)</option>
-                <option>2026 - Semester 2 (Fall)</option>
-                <option>2026 - Annual Session</option>
-              </select>
-            </div>
-            <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">Current GPA / Grade Average *</label>
-              <input type="text" required placeholder="e.g. 3.45 GPA / 85% Average" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
-            </div>
-            <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">Academic Standing *</label>
-              <select required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
-                <option>Good Standing (Passing all subjects)</option>
-                <option>Requires Subject Mentoring / Tutoring</option>
-                <option>Promoted to Next Grade</option>
-              </select>
-            </div>
-          </div>
-
-          <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">Brief Semester Progress Note</label>
-            <textarea rows="2" placeholder="Mention key academic achievements, challenges encountered, or specific subject areas where you made progress." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold"></textarea>
-          </div>
-
-          <!-- Semester Report Document Upload Box -->
-          <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1">
-              Upload Official Semester Report Card / Stamped Transcript *
-            </label>
-            <div class="dropzone p-6 rounded-2xl bg-white text-center cursor-pointer relative border-amber-300">
-              <input type="file" id="reportFiles" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
-              <div class="space-y-1">
-                <i data-lucide="file-badge" class="w-8 h-8 text-amber-600 mx-auto"></i>
-                <p class="text-xs font-bold text-brand-navy">Click to upload official semester report</p>
-                <p class="text-[11px] text-slate-500">Official stamped report cards, transcript slips, or grade letters (PDF, DOCX, JPG)</p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Country / County *</label>
+                <input type="text" required placeholder="e.g. West Africa / County" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">School / Institution Name *</label>
+                <input type="text" required placeholder="Name of school" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Current Grade / Class Level *</label>
+                <input type="text" required placeholder="e.g. Grade 9, SS2, Form 3" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
               </div>
             </div>
-            <div id="reportFilePreview" class="space-y-1"></div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Brief Statement of Financial Need *</label>
+              <textarea rows="3" required placeholder="Please describe family background, financial challenges, and how this scholarship will assist you." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold"></textarea>
+            </div>
+
+            <!-- Document Upload Box (Transcripts, Certificates) -->
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">
+                Upload Official Academic Transcripts / Report Cards *
+              </label>
+              <div class="dropzone p-6 rounded-2xl bg-white text-center cursor-pointer relative">
+                <input type="file" id="newAppFiles" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
+                <div class="space-y-1">
+                  <i data-lucide="upload-cloud" class="w-8 h-8 text-brand-gold mx-auto"></i>
+                  <p class="text-xs font-bold text-brand-navy">Click to upload or drag & drop files</p>
+                  <p class="text-[11px] text-slate-500">Upload official transcripts, previous term report cards, or ID (PDF, DOCX, JPG - max 15MB each)</p>
+                </div>
+              </div>
+              <div id="newAppFilePreview" class="space-y-1"></div>
+            </div>
+
+            <button type="submit" class="w-full btn-navy py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider text-white shadow-md">
+              Submit New Scholarship Application
+            </button>
+          </form>
+        </div>
+
+        <!-- PANE 2: CONTINUING SCHOLAR SEMESTER ACADEMIC REPORT UPLOAD -->
+        <div id="paneContinuing" class="hidden bg-brand-cream/50 rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm">
+          <div class="border-b border-slate-200 pb-5 mb-6">
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-amber-100 text-amber-900 text-[11px] font-bold mb-2">
+              <i data-lucide="alert-circle" class="w-3.5 h-3.5"></i>
+              Mandatory Every Semester
+            </div>
+            <h3 class="text-xl font-bold text-brand-navy font-heading">Continuing Scholar Semester Academic Report</h3>
+            <p class="text-xs text-slate-600 mt-1">
+              Every semester, all active AfriWell Bridge scholars must submit their latest academic report and grades to maintain ongoing scholarship sponsorship and tuition disbursement.
+            </p>
           </div>
 
-          <button type="submit" class="w-full btn-gold py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider text-white shadow-md">
-            Submit Semester Academic Report
-          </button>
-        </form>
+          <form id="formContinuing" class="space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Scholar Registration ID Number *</label>
+                <input type="text" required placeholder="e.g. AWB-SCH-2026-042" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-brand-gold">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Scholar Full Name *</label>
+                <input type="text" required placeholder="Full name of registered student" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Academic Year / Semester *</label>
+                <select required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
+                  <option>2026 - Semester 1 (Spring)</option>
+                  <option>2026 - Semester 2 (Fall)</option>
+                  <option>2026 - Annual Session</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Current GPA / Grade Average *</label>
+                <input type="text" required placeholder="e.g. 3.45 GPA / 85% Average" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Academic Standing *</label>
+                <select required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold">
+                  <option>Good Standing (Passing all subjects)</option>
+                  <option>Requires Subject Mentoring / Tutoring</option>
+                  <option>Promoted to Next Grade</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Brief Semester Progress Note</label>
+              <textarea rows="2" placeholder="Mention key academic achievements, challenges encountered, or specific subject areas where you made progress." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold"></textarea>
+            </div>
+
+            <!-- Semester Report Document Upload Box -->
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">
+                Upload Official Semester Report Card / Stamped Transcript *
+              </label>
+              <div class="dropzone p-6 rounded-2xl bg-white text-center cursor-pointer relative border-amber-300">
+                <input type="file" id="reportFiles" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
+                <div class="space-y-1">
+                  <i data-lucide="file-badge" class="w-8 h-8 text-amber-600 mx-auto"></i>
+                  <p class="text-xs font-bold text-brand-navy">Click to upload official semester report</p>
+                  <p class="text-[11px] text-slate-500">Official stamped report cards, transcript slips, or grade letters (PDF, DOCX, JPG)</p>
+                </div>
+              </div>
+              <div id="reportFilePreview" class="space-y-1"></div>
+            </div>
+
+            <button type="submit" class="w-full btn-gold py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider text-white shadow-md">
+              Submit Semester Academic Report
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- SECTION: MEET OUR ACTIVE UNIVERSITY SCHOLARS (CLIENT BENEFICIARIES SHOWCASE) -->
+      <div id="scholars" class="mt-20 pt-16 border-t border-slate-200">
+        
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 gap-6">
+          <div class="space-y-2 max-w-2xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/10 text-brand-gold-dark border border-brand-gold/25 text-xs font-bold uppercase tracking-widest">
+              <i data-lucide="award" class="w-3.5 h-3.5 text-brand-gold"></i>
+              <span>Higher Education Sponsorship</span>
+            </div>
+            <h3 class="text-3xl sm:text-4xl font-extrabold text-brand-navy font-heading">
+              Meet Our Active University Scholars
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Through AfriWell Bridge's higher education sponsorship initiative, these dedicated university students in Liberia receive full tuition coverage, academic mentorship, and the resources to build transformational careers.
+            </p>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200 shadow-sm">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              3 Active University Scholars in Liberia
+            </span>
+          </div>
+        </div>
+
+        <!-- 3-Column Scholar Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Scholar 1: Precious S Banyeah -->
+          <div class="bg-white rounded-3xl border border-slate-200 shadow-md hover-lift overflow-hidden flex flex-col group transition-all duration-300">
+            <div class="aspect-[3/4] w-full overflow-hidden relative bg-slate-100">
+              <img src="assets/img/scholar-precious-banyeah.jpg" alt="Precious S Banyeah - Bio Medical Student at University of Liberia" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-navy-dark/90 via-brand-navy-dark/25 to-transparent"></div>
+              
+              <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-brand-navy/90 text-brand-gold-light text-[11px] font-bold backdrop-blur-sm border border-brand-gold/40 shadow flex items-center gap-1.5">
+                <i data-lucide="graduation-cap" class="w-3.5 h-3.5 text-brand-gold"></i> Active Scholar
+              </span>
+
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <span class="inline-block px-2.5 py-0.5 rounded bg-brand-gold text-white text-[10px] font-bold uppercase tracking-wider mb-1">
+                  Bio Medical
+                </span>
+                <h4 class="text-2xl font-extrabold font-heading text-white drop-shadow-sm">Precious S Banyeah</h4>
+              </div>
+            </div>
+            
+            <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
+              <div class="space-y-3">
+                <div class="flex items-start gap-2.5 text-xs text-slate-700">
+                  <div class="w-7 h-7 rounded-lg bg-brand-navy/5 flex items-center justify-center text-brand-navy flex-shrink-0 mt-0.5">
+                    <i data-lucide="landmark" class="w-4 h-4 text-brand-gold"></i>
+                  </div>
+                  <div>
+                    <span class="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Institution</span>
+                    <span class="font-bold text-brand-navy text-sm">University of Liberia</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-2.5 text-xs text-slate-700">
+                  <div class="w-7 h-7 rounded-lg bg-brand-navy/5 flex items-center justify-center text-brand-navy flex-shrink-0 mt-0.5">
+                    <i data-lucide="book-open" class="w-4 h-4 text-brand-gold"></i>
+                  </div>
+                  <div>
+                    <span class="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Course of Study</span>
+                    <span class="font-semibold text-slate-800">Bio Medical</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-2.5 text-xs text-slate-700">
+                  <div class="w-7 h-7 rounded-lg bg-brand-navy/5 flex items-center justify-center text-brand-navy flex-shrink-0 mt-0.5">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-brand-gold"></i>
+                  </div>
+                  <div>
+                    <span class="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Location</span>
+                    <span class="font-medium text-slate-600">Monrovia, Liberia</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-slate-100 space-y-3">
+                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+                  <p class="text-xs text-slate-600 leading-relaxed italic">
+                    &ldquo;Pursuing biomedical studies at the University of Liberia to develop diagnostic expertise and clinical laboratory capacity to serve underprivileged healthcare centers.&rdquo;
+                  </p>
+                </div>
+                
+                <div class="flex items-center justify-between text-[11px] pt-1">
+                  <span class="inline-flex items-center gap-1.5 text-emerald-700 font-semibold">
+                    <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-600"></i> Semester Reports Verified
+                  </span>
+                  <button type="button" class="open-scholar-modal text-xs font-bold text-brand-navy hover:text-brand-gold transition flex items-center gap-1" data-scholar="precious">
+                    <span>View Profile</span> &rarr;
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scholar 2: Keline Dawoeye -->
+          <div class="bg-white rounded-3xl border border-slate-200 shadow-md hover-lift overflow-hidden flex flex-col group transition-all duration-300">
+            <div class="aspect-[3/4] w-full overflow-hidden relative bg-slate-100">
+              <img src="assets/img/scholar-keline-dawoeye.jpg" alt="Keline Dawoeye - Agricultural Student at LICC University" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-navy-dark/90 via-brand-navy-dark/25 to-transparent"></div>
+              
+              <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-brand-navy/90 text-brand-gold-light text-[11px] font-bold backdrop-blur-sm border border-brand-gold/40 shadow flex items-center gap-1.5">
+                <i data-lucide="graduation-cap" class="w-3.5 h-3.5 text-brand-gold"></i> Active Scholar
+              </span>
+
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <span class="inline-block px-2.5 py-0.5 rounded bg-brand-gold text-white text-[10px] font-bold uppercase tracking-wider mb-1">
+                  Agricultural
+                </span>
+                <h4 class="text-2xl font-extrabold font-heading text-white drop-shadow-sm">Keline Dawoeye</h4>
+              </div>
+            </div>
+            
+            <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
+              <div class="space-y-3">
+                <div class="flex items-start gap-2.5 text-xs text-slate-700">
+                  <div class="w-7 h-7 rounded-lg bg-brand-navy/5 flex items-center justify-center text-brand-navy flex-shrink-0 mt-0.5">
+                    <i data-lucide="landmark" class="w-4 h-4 text-brand-gold"></i>
+                  </div>
+                  <div>
+                    <span class="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Institution</span>
+                    <span class="font-bold text-brand-navy text-sm">LICC University</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-2.5 text-xs text-slate-700">
+                  <div class="w-7 h-7 rounded-lg bg-brand-navy/5 flex items-center justify-center text-brand-navy flex-shrink-0 mt-0.5">
+                    <i data-lucide="book-open" class="w-4 h-4 text-brand-gold"></i>
+                  </div>
+                  <div>
+                    <span class="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Course of Study</span>
+                    <span class="font-semibold text-slate-800">Agricultural</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-2.5 text-xs text-slate-700">
+                  <div class="w-7 h-7 rounded-lg bg-brand-navy/5 flex items-center justify-center text-brand-navy flex-shrink-0 mt-0.5">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-brand-gold"></i>
+                  </div>
+                  <div>
+                    <span class="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Location</span>
+                    <span class="font-medium text-slate-600">Ganta City, Nimba County, Liberia</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-slate-100 space-y-3">
+                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+                  <p class="text-xs text-slate-600 leading-relaxed italic">
+                    &ldquo;Dedicated to modern agricultural sciences, sustainable crop production, and food security to strengthen rural livelihoods across Nimba County.&rdquo;
+                  </p>
+                </div>
+                
+                <div class="flex items-center justify-between text-[11px] pt-1">
+                  <span class="inline-flex items-center gap-1.5 text-emerald-700 font-semibold">
+                    <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-600"></i> Semester Reports Verified
+                  </span>
+                  <button type="button" class="open-scholar-modal text-xs font-bold text-brand-navy hover:text-brand-gold transition flex items-center gap-1" data-scholar="keline">
+                    <span>View Profile</span> &rarr;
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scholar 3: Tarleseh Banyeah -->
+          <div class="bg-white rounded-3xl border border-slate-200 shadow-md hover-lift overflow-hidden flex flex-col group transition-all duration-300">
+            <div class="aspect-[3/4] w-full overflow-hidden relative bg-slate-100">
+              <img src="assets/img/scholar-tarleseh-banyeah.jpg" alt="Tarleseh Banyeah - Criminal Justice Student at Apex University" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-navy-dark/90 via-brand-navy-dark/25 to-transparent"></div>
+              
+              <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-brand-navy/90 text-brand-gold-light text-[11px] font-bold backdrop-blur-sm border border-brand-gold/40 shadow flex items-center gap-1.5">
+                <i data-lucide="graduation-cap" class="w-3.5 h-3.5 text-brand-gold"></i> Active Scholar
+              </span>
+
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <span class="inline-block px-2.5 py-0.5 rounded bg-brand-gold text-white text-[10px] font-bold uppercase tracking-wider mb-1">
+                  Criminal Justice
+                </span>
+                <h4 class="text-2xl font-extrabold font-heading text-white drop-shadow-sm">Tarleseh Banyeah</h4>
+              </div>
+            </div>
+            
+            <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
+              <div class="space-y-3">
+                <div class="flex items-start gap-2.5 text-xs text-slate-700">
+                  <div class="w-7 h-7 rounded-lg bg-brand-navy/5 flex items-center justify-center text-brand-navy flex-shrink-0 mt-0.5">
+                    <i data-lucide="landmark" class="w-4 h-4 text-brand-gold"></i>
+                  </div>
+                  <div>
+                    <span class="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Institution</span>
+                    <span class="font-bold text-brand-navy text-sm">Apex University</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-2.5 text-xs text-slate-700">
+                  <div class="w-7 h-7 rounded-lg bg-brand-navy/5 flex items-center justify-center text-brand-navy flex-shrink-0 mt-0.5">
+                    <i data-lucide="book-open" class="w-4 h-4 text-brand-gold"></i>
+                  </div>
+                  <div>
+                    <span class="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Course of Study</span>
+                    <span class="font-semibold text-slate-800">Criminal Justice</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-2.5 text-xs text-slate-700">
+                  <div class="w-7 h-7 rounded-lg bg-brand-navy/5 flex items-center justify-center text-brand-navy flex-shrink-0 mt-0.5">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-brand-gold"></i>
+                  </div>
+                  <div>
+                    <span class="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Location</span>
+                    <span class="font-medium text-slate-600">Monrovia, Liberia</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-slate-100 space-y-3">
+                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+                  <p class="text-xs text-slate-600 leading-relaxed italic">
+                    &ldquo;Studying criminal justice at Apex University to advance human rights, institutional accountability, and legal advocacy for underserved communities.&rdquo;
+                  </p>
+                </div>
+                
+                <div class="flex items-center justify-between text-[11px] pt-1">
+                  <span class="inline-flex items-center gap-1.5 text-emerald-700 font-semibold">
+                    <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-600"></i> Semester Reports Verified
+                  </span>
+                  <button type="button" class="open-scholar-modal text-xs font-bold text-brand-navy hover:text-brand-gold transition flex items-center gap-1" data-scholar="tarleseh">
+                    <span>View Profile</span> &rarr;
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Callout Banner under Scholars -->
+        <div class="mt-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-brand-navy via-brand-navy-light to-brand-navy text-white border border-brand-navy shadow-lg flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-white/10 border border-brand-gold/40 flex items-center justify-center flex-shrink-0 text-brand-gold-light">
+              <i data-lucide="sparkles" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h5 class="text-base sm:text-lg font-bold font-heading text-white">Invest in an African Scholar's Future</h5>
+              <p class="text-xs sm:text-sm text-slate-200 mt-0.5">Your sponsorship covers semester tuition, textbooks, and academic mentorship for youth in Liberia.</p>
+            </div>
+          </div>
+          <a href="#impact" class="btn-gold px-7 py-3 rounded-full font-bold text-xs uppercase tracking-wider text-white whitespace-nowrap shadow-md hover:scale-105 transition flex items-center gap-2">
+            <i data-lucide="heart" class="w-4 h-4 fill-white"></i>
+            <span>Sponsor a Student</span>
+          </a>
+        </div>
+
       </div>
 
     </div>
@@ -711,9 +975,10 @@
                   Oversees student scholarship selection, semester academic report tracking, school supplies distribution, and student mentorship across partner schools.
                 </p>
               </div>
-              <ul class="text-[11px] text-slate-500 space-y-1 border-t border-slate-100 pt-3 mt-4">
+              <ul class="text-[11px] text-slate-500 space-y-1.5 border-t border-slate-100 pt-3 mt-4">
                 <li>• Scholarship Coordinator Chair</li>
                 <li>• School Support & Mentors</li>
+                <li>• <a href="#scholars" class="text-brand-navy font-bold hover:text-brand-gold transition inline-flex items-center gap-1"><i data-lucide="arrow-right-circle" class="w-3.5 h-3.5 text-brand-gold"></i> Active Scholars: Precious, Keline, Tarleseh &rarr;</a></li>
               </ul>
             </div>
 
@@ -1147,6 +1412,60 @@
         <blockquote class="p-4 rounded-2xl bg-brand-cream border-l-4 border-brand-gold italic text-slate-700">
           “I began my journey with very little, but I carried something powerful with me: hope. Circumstances may delay you, but they do not have to define you. Education can open doors that once seemed impossible to reach, and every difficult chapter can become preparation for a greater purpose.”
         </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACTIVE SCHOLAR DETAILS MODAL -->
+  <div id="scholarModal" class="fixed inset-0 z-50 modal-backdrop hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative border border-slate-200 max-h-[90vh] overflow-y-auto space-y-5">
+      <button id="closeScholarModalBtn" class="sticky top-0 float-right text-slate-400 hover:text-brand-navy p-1.5 bg-white rounded-full shadow-sm border border-slate-200" aria-label="Close scholar modal">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="flex flex-col sm:flex-row items-center gap-5 border-b border-slate-200 pb-5">
+        <div class="w-28 h-36 rounded-2xl overflow-hidden border-2 border-brand-gold shadow-sm flex-shrink-0 bg-slate-100">
+          <img id="modalScholarImg" src="" alt="Scholar photo" class="w-full h-full object-cover object-top">
+        </div>
+        <div class="text-center sm:text-left space-y-1">
+          <span class="inline-block px-2.5 py-0.5 rounded bg-brand-gold/15 text-brand-gold-dark text-[10px] font-bold uppercase tracking-wider">
+            Sponsored University Scholar
+          </span>
+          <h3 id="modalScholarName" class="text-2xl font-extrabold text-brand-navy font-heading"></h3>
+          <p id="modalScholarInstitution" class="text-xs font-bold text-slate-700"></p>
+          <p id="modalScholarCourse" class="text-xs text-brand-gold-dark font-semibold"></p>
+          <p id="modalScholarLocation" class="text-[11px] text-slate-500"></p>
+        </div>
+      </div>
+
+      <div class="space-y-4 text-xs sm:text-sm text-slate-700 leading-relaxed">
+        <div class="grid grid-cols-2 gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100 text-xs">
+          <div>
+            <span class="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Scholarship Type</span>
+            <span class="font-bold text-brand-navy">Full Higher Education Tuition</span>
+          </div>
+          <div>
+            <span class="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Academic Standing</span>
+            <span class="font-bold text-emerald-700 flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Verified & In Good Standing
+            </span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Academic Focus & Mission</h4>
+          <p id="modalScholarBio" class="text-slate-600 leading-relaxed"></p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-brand-cream/60 border border-brand-gold/20 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div>
+            <p class="text-xs font-bold text-brand-navy">Support Higher Education in Liberia</p>
+            <p class="text-[11px] text-slate-600">Help AfriWell Bridge sponsor semester tuition and textbooks.</p>
+          </div>
+          <a href="#impact" id="modalSupportBtn" class="btn-gold px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider text-white whitespace-nowrap">
+            Support Scholars
+          </a>
+        </div>
       </div>
     </div>
   </div>
