@@ -255,6 +255,14 @@ document.addEventListener('DOMContentLoaded', () => {
       location: 'Monrovia, Liberia',
       img: 'assets/img/scholar-tarleseh-banyeah.jpg',
       bio: 'Tarleseh Banyeah is enrolled in the Criminal Justice degree program at Apex University in Monrovia. Under AfriWell Bridge\'s scholarship sponsorship, Tarleseh is preparing for a career in judicial administration, institutional integrity, and human rights advocacy, aiming to defend vulnerable families and expand access to justice in Liberia.'
+    },
+    frances: {
+      name: 'Frances F Leagan',
+      institution: 'United Methodist University',
+      course: 'Course of Study: Biology & Chemistry',
+      location: 'Monrovia, Liberia',
+      img: 'assets/img/scholar-frances-leagan.jpg',
+      bio: 'Frances F Leagan recently graduated from high school with honors and successfully completed vocational training in culinary and baking arts. Supported by AfriWell Bridge, Frances is entering United Methodist University in Monrovia to pursue double sciences in Biology and Chemistry, aiming to advance scientific education and diagnostic healthcare in Liberia.'
     }
   };
 
@@ -267,6 +275,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (modalScholarCourse) modalScholarCourse.textContent = data.course;
     if (modalScholarLocation) modalScholarLocation.textContent = data.location;
     if (modalScholarBio) modalScholarBio.textContent = data.bio;
+
+    const francesGallery = document.getElementById('modalFrancesGallery');
+    if (francesGallery) {
+      if (key === 'frances') {
+        francesGallery.classList.remove('hidden');
+      } else {
+        francesGallery.classList.add('hidden');
+      }
+    }
 
     scholarModal.classList.remove('hidden');
     scholarModal.classList.add('flex');
